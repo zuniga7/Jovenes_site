@@ -43,7 +43,23 @@ function processLogin () {
 }
 
 function addNewsForm () {
-	// body...
+	$(".afterNavBar").empty();
+	$("#panel-right").panel("close");
+
+	
+	var form = "<div class='container'>"+
+    "  <form class='form-horizontal' id='newsform' method='post' onsubmit='addNews()'>"+
+    "    <h2 class='heading'>New Message!</h2>"+
+    "    <div class='alerts'></div>"+
+    "     <div class='control-group'>"+
+    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title'>"+
+    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message'></textarea>"+
+    "    </div>"+
+    "    <button class='btn btn-primary btn-large' type='submit'>Submit</button>"+
+    "  </form>"+
+    "</div>";
+
+    $(".afterNavBar").append(form);
 }
 
 function badPass () {
