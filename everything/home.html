@@ -76,6 +76,20 @@
   <div data-role="panel" id="panel-right" data-theme='b' data-display="push" data-position="right">
     <!-- menu -->
     <p class='title'>Sign In</p>
+
+    <div class="container">
+      <form class="form-signin" id="form" method = "post" action = "processlogin.php">
+        <h2 class="heading">Sign in!</h2>
+        <div class="alerts"></div>
+         <div class="control-group">
+            <input type="text" id="user" class="" name="username" placeholder="Username" >
+            <input type="password" id="pass" class="" name="password" placeholder="Password" >
+        </div>
+        <button class="btn btn-primary btn-large" type="submit">Sign In</button>
+
+      </form>
+
+    </div>
   </div>
 
 </div>
