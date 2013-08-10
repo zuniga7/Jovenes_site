@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta name="GENERATOR" content="www.dudamobile.com"></meta>
+
+
+
+<meta id="view" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Lato|Arvo|PT+Sans|Ubuntu:300,400,500,700|PT+Serif|Josefin+Slab|Open+Sans|Vollkorn|Abril+Fatface|Old+Standard+TT|Lobster|Sansita+One|Sanchez|Playfair+Display|Source+Sans+Pro:100,200,300,400|Oxygen|Roboto:400,300,100' rel='stylesheet' type='text/css'>
+
+
+
+	<link type="text/css" rel="stylesheet" href="/_dm/s/rt/css/duda-css-runtime-package.min.css?version=2013-08-05T15:40:46"/>
+
+
+<link type="text/css" rel="stylesheet" href="/_dm/s/rt/css/font-icons/font-awesome/css/font-awesome.min.css?version=2013-08-05T15:40:46"/>
+<link type="text/css" rel="stylesheet" href="/_dm/s/rt/css/font-icons/dm-font/style.css?version=2013-08-05T15:40:46"/>
+
+
+
+
+<!--Add favorites icons-->
+
+
+
+<link rel="shortcut icon" href="http://www.dudamobile.com/favicon.ico"/>
+
+
+
+
+<style id="globalCssTheme" type="text/css">
+/*DUDAMOBILE_THEME_BEGIN*/@import url('/_dm/s/rt/generate_css/gj.css?v=xyxyxya-1380135667xyxyxyb');*#dm *.dmn *.navItemIcon
+{
+	background-image:;
+}
+
+/* ==================================================================== */
+/*                          Navigation Icons                            */
+/* ==================================================================== */
+*#dm *.dmn *.dmUDNavigationItem_03 *.navItemIcon
+{
+	color:rgb(51, 51, 51);
+	background-image:none;
+}
+*#dm *.dmn *.dmUDNavigationItem_03 *.navItemIcon
+{
+	color:rgb(51, 51, 51);
+	background-image:none;
+}
+*#dm *.dmn *.dmUDNavigationItem_03 *.navItemIcon
+{
+	color:rgb(51, 51, 51);
+	background-image:none;
+}
+/*DUDAMOBILE_THEME_END*/
+</style>
+<style id="globalCss" type="text/css">
+
+</style>
+
+<style id="headerCss" type="text/css">
+*#dm *.p_hfcontainer a.u_dm-logo-anchor
+{
+	display:none !important;
+}
+*#dm *.p_hfcontainer div.u_logo-div
+{
+	display:none !important;
+}
+*#dm *.p_hfcontainer div.u_dm-title
+{
+	display:block !important;
+}
+
+</style>
+
+
+
+		<style id="pagestyle" type="text/css"> 
+		
+		</style>
+	
+<!--ie hack. set the max width of the logo image in px, otherwise you canot change its size  -->
+		 <!--[if IE 7]>
+			<style>
+				.fw-head.fw-logo img
+				{
+					max-width: 290px;
+				}
+				
+				.dm_header .logo-div img
+				{
+					max-width: 290px;
+				}
+			</style>
+		<![endif]-->
+		<!--[if IE 8]>
+			<style>
+				.fw-head .fw-logo img
+				{
+					max-width: 290px;
+				}
+				
+				.dm_header .logo-div img
+				{
+					max-width: 290px;
+				}
+				*#dm div.dmHeader
+				{
+					_height:90px;
+					min-height:0px;
+				}
+				
+			</style>
+<![endif]-->
+
+
+		<style type="text/css"> 
+		a[href*="tel:"] , a[href*="sms:"] 
+		{
+			display:none !important;
+		}
+		</style>
+	
+
+<style>
+</style>
+
+
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+
+
+	
+
+
+<!-- back button -->
+<script>
+var previewPopUp = true;
+$( document ).ready(function() {
+    if (!$.DM.getQueryParam(window.location.href, "nee")) {
+        var baseUrl = Parameters.HomeUrl.trim().replace('?preview=true','');
+        var parentWindow = window.parent;
+
+        var OPEN_TABLE_LINE = '_dm/s/rt/widgets/opentable/opentable.jsp';
+
+
+        if(parentWindow.$ && parentWindow.$.dmfw) {
+	        parentWindow.$.dmfw.previewExternalLink.setLastEditePage(window.location.href);
+
+	        $('body').on('click','a',function(e){
+                var $this = $(this);
+                var $thisHref = $this.attr('href');
+                
+                if ("_blank" == $this.attr('target')){
+                    return;
+                }
+
+	            if (('dmBackBtn' !== $this.attr('id') && $thisHref && $thisHref != '' && -1 == $thisHref.indexOf('/site/'+Parameters.SiteAlias) && 'true'!=$this.attr('dm_dont_rewrite_url')) || 0 == $thisHref.indexOf('http://m.dudamobile.com') || 'classic_link'==$(this).attr('id') || -1 < $thisHref.indexOf(OPEN_TABLE_LINE) ){
+	                if (-1 == $thisHref.indexOf(baseUrl)  || 0 == $thisHref.indexOf('http://m.dudamobile.com') || 'classic_link'==$(this).attr('id') || -1 < $thisHref.indexOf(OPEN_TABLE_LINE) ){
+	                    parentWindow.$.dmfw.previewExternalLink.setBackFromExternal(true);
+	                }else{
+	                    parentWindow.$.dmfw.previewExternalLink.setLastEditePage($thisHref);
+	                }
+	            }
+	        });
+        }
+    }
+});
+
+</script>
+<!-- END OF back button -->
+	
+
+	<title></title>
+
+
+	
+
+
+    <link rel="canonical" href="null"/>
+
+
+
+
+
+	<script type="text/javascript" src="/_dm/s/rt/scripts/duda-js-runtime-package.min.js?version=2013-08-05T15:40:46"></script>
+
+<!--<script type="text/javascript" src="/editor/nee/utils/photoSwipe/klass.min.js"></script>-->
+<!--<script type="text/javascript" src="/editor/nee/utils/photoSwipe/code.photoswipe.jquery-3.0.4.min.js"></script>-->
+<!-- <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>-->
+
+
+
+
+<script>
+function styleImages(element) {
+	
+		if (!element){
+			element = jQuery("body");
+		}
+
+		element.find("img").filter(function() {return ((jQuery(this).attr('dm') == undefined && jQuery(this).css("display")!="none") && (jQuery(this).width() <= 140));}).css("display","inline").css("margin-right","5px");
+		element.find("img").filter(function() {return ((jQuery(this).attr('dm') == undefined && jQuery(this).css("display")!="none") && (jQuery(this).width() > 140));}).css("display","block").css("margin-right","auto").css("margin-left","auto");
+		element.find(".dmContent img").css("margin-top","5px").css("margin-bottom","5px");
+
+		element.find("img[data-src]").each(function(index) {
+			jQuery(this).attr("src", jQuery(this).attr("data-src"));
+			jQuery(this).css("display","block").css("margin-right","auto").css("margin-left","auto");
+		});
+	
+}
+
+jQuery(document).ready(function(){
+	setTimeout("styleImages()",300);
+});
+jQuery(window).load(function() {
+	styleImages();
+	setTimeout("styleImages()",2000);
+	jQuery.DM.updateIOSHeight();
+});
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+Parameters.AjaxContainer = "div.dmBody";
+Parameters.WrappingContainer = "div.dmOuter";
+Parameters.HomeUrl = "http://mobile.dudamobile.com/site/gj";
+Parameters.SiteAlias = "gj";
+Parameters.SiteId = "294185";
+Parameters.InitialPageAlias = "photo gallery";
+Parameters.IsFromScratch = "false";
+Parameters.CurrentPageUrl = "null";
+Parameters.IsCurrentHomePage = false;
+
+Parameters.AllowAjax = false;
+Parameters.AfterAjaxCommand = null;
+Parameters.NavigationAreaParams.ShowBackToHomeOnInnerPages = true;
+Parameters.NavigationAreaParams.NavbarSize = 5;
+Parameters.NavigationAreaParams.NavbarLiveHomePage = "http://mobile.dudamobile.com/site/gj";
+Parameters.NavigationAreaParams.BlockContainerSelector = ".dmBody";
+Parameters.NavigationAreaParams.NavbarSelector = "#dmNav:has(a)";
+Parameters.NavigationAreaParams.SubNavbarSelector = "#subnav_main";
+Parameters.HomeLinkText="Back To Home";
+Parameters.UseGalleryModule = false;
+Parameters.CurrentThemeName = "Layout Theme";
+Parameters.DefaultPageAlias = "default";
+Parameters.LayoutVariationID = 1;
+Parameters.LayoutID = 3;
+Parameters.WidgetStyleID = null;
+Parameters.IsHeaderFixed= true;
+Parameters.IsHeaderSkinny= true;
+Parameters.IsBfs= true;
+Parameters.LayoutParams = {
+	_manifestId : 1016
+};
+
+
+			Parameters.NavigationAreaParams.MoreButtonText = "More Options";
+		
+			Parameters.NavigationAreaParams.LessButtonText = "Less Options";
+			
+			Parameters.HomeLinkText = "Home";
+		
+
+//Parameters.Charset = 'null';
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$(window).resize(function() {
+		jQuery.DM.updateWidth();
+		
+		
+
+		
+	});
+	$(window).bind("orientationchange",function(e) {
+		jQuery.DM.updateWidth();
+		jQuery.layoutManager.initLayout();
+		
+	});
+	$(document).resize(function() {
+		jQuery.DM.updateWidth();
+// 		jQuery.layoutManager.initLayout();
+		
+
+		
+	});
+</script>
+</head>
+
+
+
+
+<body id="dmRoot" class=" mac" style="overflow:auto;padding:0;margin:0;float:none;"  >
+
+
+<script>
+jQuery.DM.updateWidth();
+jQuery.DM.updateIOSHeight();
+</script>
+
+
+	
+<script type="text/javascript">
+
+
+	function setLoaderSize(height, width, loader) {
+		loader = loader || $("body");
+		var cols = loader.find(".coloumns");
+
+		if (cols != null) {
+			cols.css("height", height + "px");
+			cols.css("width", width + "px");
+		} else {
+			for ( var i = 1; i < 13; i++) {
+				loader.find("#" +'coloumn' + i).height(height);
+				loader.find("#" +'coloumn' + i).width(width);
+				
+				/* document.getElementById('coloumn' + i).style.height = height
+						+ "px";
+				document.getElementById('coloumn' + i).style.width = width
+						+ "px"; */
+			}
+		}
+	}
+
+	function setLoaderColor(colorString, loader) {
+		loader = loader || $("body");
+		var cols = loader.find(".coloumns");
+		if (cols != null) {
+			cols.css("background-color", colorString);
+		} else {
+			for ( var i = 1; i < 13; i++) {
+				loader.find("#" +'coloumn' + i).css("background", colorString);
+				//document.getElementById('coloumn' + i).style.background = colorString;
+			}
+		}
+	}
+	
+	function showDefaultLoader(loader, wnd)
+	{
+		setLoaderSize(10, 3, loader);
+		setLoaderColor("black", loader);
+		loader.closest("body").css("height","100%");
+		loader.css("position", "absolute").css("display", "block")
+		.css("z-index", "100000")
+		.css("left", ($(wnd).width() / 2) + "px")
+		.css("top", ($(wnd).height() / 2) + "px");
+		loader.closest("body").css("height","");
+		loader.find("#imageZone").show();
+	}
+</script>
+
+<div id="disabledImageZone" style="display:none;z-index:-1">
+    	
+    	<style type='text/css'>
+		#imageZone{
+			position:absolute;
+			margin:auto;
+		}
+		.coloumns{
+			border-radius: 3px;
+			background-color:rgb(249,152,13);
+			/*border:1px solid #999;*/
+			height:18px;
+			width:6px;
+			-webkit-animation-name: loader;
+		 	-webkit-animation-duration: 1s;
+		 	-webkit-animation-iteration-count: infinite;
+		 	-webkit-animation-direction: linear;
+		    
+		    -moz-animation-name: loader;
+		 	-moz-animation-duration: 1s;
+		 	-moz-animation-iteration-count: infinite;
+		 	-moz-animation-direction: linear;
+		 	
+			opacity:.25;
+			-webkit-transform:scale(0.7);
+			-webkit-transform-origin:50% 180%;
+			-moz-transform:scale(0.7);
+			-moz-transform-origin:50% 180%;
+			position:absolute;
+		}
+		#coloumn1{
+			-webkit-transform:rotate(0deg);
+		 	-webkit-animation-delay: -.914s;
+		 	-moz-transform:rotate(0deg);
+		 	-moz-animation-delay: -.914s;
+		 }
+		#coloumn2{
+			-webkit-transform:rotate(30deg);
+		 	-webkit-animation-delay: -.831s;
+		 	-moz-transform:rotate(30deg);
+		 	-moz-animation-delay: -.831s;
+		}
+		#coloumn3{
+			-webkit-transform:rotate(60deg);
+		 	-webkit-animation-delay: -.747s;
+		 	-moz-transform:rotate(60deg);
+		 	-moz-animation-delay: -.747s;
+		}
+		#coloumn4{
+			-webkit-transform:rotate(90deg);
+		 	-webkit-animation-delay: -.664s;
+		 	-moz-transform:rotate(90deg);
+		 	-moz-animation-delay: -.664s;
+		 }
+		#coloumn5{
+			-webkit-transform:rotate(120deg);
+		 	-webkit-animation-delay: -.581s;
+		 	-moz-transform:rotate(120deg);
+		 	-moz-animation-delay: -.581s;
+		}
+		#coloumn6{
+			-webkit-transform:rotate(150deg);
+		 	-webkit-animation-delay: -.498s;
+		 	-moz-transform:rotate(150deg);
+		 	-moz-animation-delay: -.498s;
+		}
+		#coloumn7{
+			-webkit-transform:rotate(180deg);
+		 	-webkit-animation-delay: -.415s;
+		 	-moz-transform:rotate(180deg);
+		 	-moz-animation-delay: -.415s;
+		}
+		#coloumn8{
+			-webkit-transform:rotate(210deg);
+		 	-webkit-animation-delay: -.332s;
+		 	-moz-transform:rotate(210deg);
+		 	-moz-animation-delay: -.332s;
+		}
+		#coloumn9{
+			-webkit-transform:rotate(240deg);
+		 	-webkit-animation-delay: -.249s;
+		 	-moz-transform:rotate(240deg);
+		 	-moz-animation-delay: -.249s;
+		}
+		#coloumn10{
+			-webkit-transform:rotate(270deg);
+		 	-webkit-animation-delay: -.166s;
+		 	-moz-transform:rotate(270deg);
+		 	-moz-animation-delay: -.166s;
+		 }
+		#coloumn11{
+			-webkit-transform:rotate(300deg);	 	
+		 	-webkit-animation-delay: -.083s;
+		 	-moz-transform:rotate(300deg);
+		 	-moz-animation-delay: -.083s;
+		}
+		#coloumn12{
+			-webkit-transform:rotate(330deg);
+			-moz-transform:rotate(330deg);
+		}
+		@-webkit-keyframes loader {
+			0%{opacity:1;}
+			100%{opacity:.25;}
+		}
+		@-moz-keyframes loader {
+		  0%{opacity:1;}
+		  100%{opacity:.25;}
+		}
+    	</style>
+    	<div id='imageZone'>
+			<div id='coloumn1' class='coloumns'></div>
+			<div id='coloumn2' class='coloumns'></div>
+			<div id='coloumn3' class='coloumns'></div>
+	        <div id='coloumn4' class='coloumns'></div>
+			<div id='coloumn5' class='coloumns'></div>
+			<div id='coloumn6' class='coloumns'></div>
+			<div id='coloumn7' class='coloumns'></div>
+			<div id='coloumn8' class='coloumns'></div>
+			<div id='coloumn9' class='coloumns'></div>
+	        <div id='coloumn10' class='coloumns'></div>
+			<div id='coloumn11' class='coloumns'></div>
+			<div id='coloumn12' class='coloumns'></div>
+		</div>
+		
+    </div>
+
+<!-- wrap the content with a div to ensure that css created by us will override page/site css    -->
+<div id="dm" class='dmwr'>
+	
+	
+	<div class="dm_wrapper fixHeadFootSlideUp-var1 widgetStyle-1 fixHeadFootSlideUp"> 
+		 <body dmwrapped="true" id="1788728458"> <div dm:templateorder="1" dmtemplateid="fixHeadFixFootSlideUp" class="dm-bfs dm-layout-sec"><!-- 	<dm:Variable dm:id="wrapperVariable" dm:target="layout" dm:attribute="class"/> --> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper fixHeadFootSlideUp-var"> <a class="dmBackToTop" id="dmBackToTop"></a> 
+ <div class="fixedPart"> <div id="fixHead" class="fixedHeaderLimitSize dmHeader p_hfcontainer u_hcontainer fixedHeader"> <div class="u_logo-div logo-div dm_header" id="logo-div" style="display:none;"> <a id="dm-logo-anchor" class="u_dm-logo-anchor dm-logo-anchor" href="/site/gj"><img id="dm-logo-image" class="dm-logo-image" src="/_dm/s/rt/images/logohere.png"/></a> 
+</div> 
+ <div class="u_dm-title dm-title dm_header" id="dm-title">Grupo Jovenes</div> 
+<!-- 								<a id="dmBackBtn" class="uiBtn">Back</a> --></div> 
+</div> 
+ <div id="iscrollBody"> <div id="site_content"> <div id="ad"> <div> <script>jQuery(document).ready(function() {_gaq.push(['_trackEvent','DudaBanner', 'dm_banner_1.png','impression']);})</script> 
+ <a href="/site/gj/default?url=http%3A%2F%2Fm.dudamobile.com%2Fm%3Fsource%3Ddm_banner_1.png" onclick="_gaq.push(['_trackEvent','DudaBanner', 'dm_banner_1.png','click']);"><img width="100%" src="/_dm/s/rt/images/banners/dm_banner_1.png"/></a> 
+</div> 
+</div> 
+<!-- 								<div class="freeHeader" id="hcontainer" duda_id="hcontainer"> --><!-- 									<dm:FreeHeader/> --><!-- 								</div> --> <div> <div dmwrapped="true" id="1788728458" class="dmBody u_dmStyle_template_photo_gallery"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="navWrapper" class="navWrapper"> <div id="hiddenNavPlaceHolder" class="hiddenNavPlaceHolder navPlaceHolder dmDisplay_None" navplaceholder="true"></div> 
+ <div id="backToHomePlaceHolder" class="backToHomePlaceHolder navPlaceHolder" navplaceholder="true"></div> 
+ <div id="newNavigationElementPlaceHolder" class="newNavigationElementPlaceHolder navPlaceHolder" navplaceholder="true"></div> 
+ <div id="newNavigationSubNavPlaceHolder" class="newNavigationSubNavPlaceHolder navPlaceHolder" navplaceholder="true"></div> 
+</div> 
+ <div id="dm_content" class="dmContent"> <div dm:templateid="GalleryTemplate" class="dmGalleryTmpl generalTmplWrapper" id="1574554293"> <div class="dmPhotoGallery dmNoMargin dmPageWidget" galleryoptionsparams="{thumbnailsPerRow: 2, rowsToShow: 3, imageScaleMethod: true}" id="1817441799"> <h3 class="photogalleryheader  photogalleryheaderPadding dmwidget-title" id="1309120193">My Photo Gallery</h3> 
+ <ul class="dmPhotoGalleryHolder gallery shadowEffectToChildren gallery2inArow" id="1479382355" dont_set_id="true"> <li class="photoGalleryThumbs" index="0" style="display: inline-block;" id="1477460529"><span id="1610905716"></span> <a href="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" dm_dont_rewrite_url="true" id="1026478746"><img src="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" id="1656498595"/></a> 
+</li> 
+ <li class="photoGalleryThumbs" index="1" style="display: inline-block;" id="1925036054"><span id="1383535128"></span> <a href="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" dm_dont_rewrite_url="true" id="1177484630"><img src="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" id="1218704286"/></a> 
+</li> 
+ <li class="photoGalleryThumbs" index="2" style="display: inline-block;" id="1936294967"><span id="1967184054"></span> <a href="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" dm_dont_rewrite_url="true" id="1234866374"><img src="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" id="1557352782"/></a> 
+</li> 
+ <li class="photoGalleryThumbs" index="3" style="display: inline-block;" id="1556694642"><span id="1172328877"></span> <a href="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" dm_dont_rewrite_url="true" id="1097916759"><img src="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" id="1626237970"/></a> 
+</li> 
+ <li class="photoGalleryThumbs" index="4" style="display: inline-block;" id="1084824592"><span id="1259764931"></span> <a href="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" dm_dont_rewrite_url="true" id="1357272270"><img src="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" id="1362272437"/></a> 
+</li> 
+ <li class="photoGalleryThumbs" index="5" style="display: inline-block;" id="1387543972"><span id="1853282708"></span> <a href="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" dm_dont_rewrite_url="true" id="1080415834"><img src="https://s3.amazonaws.com/dm-direct/bfs-images/blanks-img-placeholder2.png" id="1467051148"/></a> 
+</li> 
+</ul> 
+ <div class="photoGalleryViewAll" isall="true" style="display:none;" id="1964130946">view all</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="f_hcontainer dmFooter p_hfcontainer"></div> 
+</div> 
+ <div id="mobileFooter"> <a dm_dont_rewrite_url="true" href="http://m.dudamobile.com?source=DM_DIRECT" style="text-decoration:none"> <div id="powered"> <span style="vertical-align:8px;margin-right: 5px;"> <u>Build</u> 
+a Mobile Site</span> 
+<img src="/_dm/s/rt/images/footer_dm_logo.png"/></div> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <ul class="dmn dmLayoutNav hiddenNavPlaceHolder navPlaceHolder dmDisplay_None"></ul> 
+ <div id="slideUpNav" class="dmn dmLayoutNav" dmoffset="3"> <ul class="dmNavigationStyle_1 dmNavigation dmn  dmShowInnerBar"> <li class="${li_class} listBtnHidden dmHideFromNav   navListLi" id="listBtnHidden"> <a href="${href}" dm_dont_rewrite_url="true" class="${a_class}" target="${a_target}"> <span class="navItemIconBg"> <span class="navItemIcon"></span> 
+</span> 
+ <span class="navItemText">${text}</span> 
+ <span class="navItemArrowBg"> <span class="navItemArrow"></span> 
+</span> 
+</a> 
+</li> 
+ <li class="    navListLi" id=""> <a href="/site/gj/contact" class="dmUDNavigationItem_03 dmCoreImg"> <span class="navItemIconBg"> <span class="navItemIcon"></span> 
+</span> 
+ <span class="navItemText">Preaches</span> 
+ <span class="navItemArrowBg"> <span class="navItemArrow"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</div> 
+ <div class="fixedFooterContainer"> <ul id="fixFoot" class="dmn dmLayoutNav fixedFooter dmNavigationWithLink dmn"> <li class=" footerBtn   navButtonLi" id=""> <span class="ButtonItemArrowUp"></span> 
+ <a href="/site/gj/home" animationtype="inner" class="dmUDNavigationItem_00" icon-name="hasFontIcon icon-home"> <span class="navItemIconBg"> <span class="navItemIcon hasFontIcon icon-home"></span> 
+</span> 
+ <span class="navItemText">Home</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class=" footerBtn   navButtonLi" id=""> <span class="ButtonItemArrowUp"></span> 
+ <a href="/site/gj/about" animationtype="inner" class="dmUDNavigationItem_01" icon-name="hasFontIcon icon-info"> <span class="navItemIconBg"> <span class="navItemIcon hasFontIcon icon-info"></span> 
+</span> 
+ <span class="navItemText">About Us</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class=" footerBtn  navItemSelectedServer navButtonLi" id=""> <span class="ButtonItemArrowUp"></span> 
+ <a href="/site/gj/photo gallery" animationtype="inner" class="dmUDNavigationItem_02" icon-name="hasFontIcon icon-picture"> <span class="navItemIconBg"> <span class="navItemIcon hasFontIcon icon-picture"></span> 
+</span> 
+ <span class="navItemText">Gallery</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class=" footerBtn   navButtonLi" id=""> <span class="ButtonItemArrowUp"></span> 
+ <a href="/site/gj/contact" animationtype="inner" class="dmUDNavigationItem_03 dmCoreImg" icon-name="hasFontIcon icon-desktop"> <span class="navItemIconBg"> <span class="navItemIcon hasFontIcon icon-desktop"></span> 
+</span> 
+ <span class="navItemText">Preaches</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="${li_class} footerBtn footerBtnHidden dmHideFromNav  navButtonLi" id="footerBtnHidden"> <span class="ButtonItemArrowUp"></span> 
+ <a href="${href}" dm_dont_rewrite_url="true" animationtype="inner" class="${a_class}" target="${a_target}" icon-name="hasFontIcon ${font_icon}"> <span class="navItemIconBg"> <span class="navItemIcon hasFontIcon ${font_icon}"></span> 
+</span> 
+ <span class="navItemText">${text}</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="footerBtn footerMoreBtn dmUDNavigationItem_dmMore slideUpTrigger dmDisplay_None  navButtonLi" id="" icon-name="hasFontIcon icon-angle-down"> <span class="ButtonItemArrowUp"></span> 
+ <span class="navItemIconBg"> <span class="navItemIcon hasFontIcon icon-angle-down"></span> 
+</span> 
+ <span class="navItemText">More Options</span> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</body> 
+
+	</div>
+</div>
+
+
+
+
+    <script type="text/javascript" src="/_dm/s/rt/scripts/duda-js-runtime-layouts-package.min.js?version=2013-08-05T15:40:46"></script>
+
+
+<script type="text/javascript">
+    var _dm_gaq = {};
+    var _gaq = _gaq || [];
+    
+    
+    _dm_gaq.siteAlias = 'gj';
+    _dm_gaq.systemGaqID = 'UA-7265702-38';
+    _dm_gaq.systemAggregatedGaqID = 'UA-7265702-9';    
+    _dm_gaq.externalGaqID = '';
+    
+    if(_dm_gaq.systemGaqID) {
+        _gaq.push(['_setAccount', _dm_gaq.systemGaqID]);
+        _gaq.push(['_setAllowLinker', true ]);
+        _gaq.push(['_setVar', _dm_gaq.siteAlias]);
+        _gaq.push(['_setCustomVar', 1, 'product', 'DM_DIRECT',  2 ]);
+        _gaq.push(['_setCustomVar', 2, 'plan', 'FREE',  2 ]);
+        _gaq.push(['_setCustomVar', 3, 'dudafooter', 'true',  2 ]);
+
+        _gaq.push(['_trackPageview' ]);
+    }
+
+    if(_dm_gaq.systemAggregatedGaqID && (_dm_gaq.systemAggregatedGaqID != _dm_gaq.systemGaqID)){
+       // track aggregated account
+      _gaq.push(['b._setAccount', _dm_gaq.systemAggregatedGaqID]);
+      _gaq.push(['b._setAllowLinker', true]);
+      _gaq.push(['b._setVar', _dm_gaq.siteAlias]);
+      _gaq.push(['b._setCustomVar', 1, 'product', 'DM_DIRECT',  2 ]);
+      _gaq.push(['b._setCustomVar', 2, 'plan', 'FREE',  2 ]);
+      _gaq.push(['b._setCustomVar', 3, 'dudafooter', 'true',  2 ]);
+      _gaq.push(['b._trackPageview' ]);
+    }
+        
+    if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {    	    	
+        _gaq.push(['c._setAccount', _dm_gaq.externalGaqID]);                      
+        _gaq.push(['c._setVar', _dm_gaq.siteAlias]);
+        _gaq.push(['c._trackPageview' ]);
+    }
+    
+	(
+			function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+						: 'http://www')
+						+ '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+	
+	
+	
+	 </script>
+<noscript>
+  <img src="/runtime/ga_duda.jsp?utmac=MA-7265702-38&amp;utmn=1180804372&amp;utmr=http%3A%2F%2Fmobile.dudamobile.com%2Fsite%2Fgj%2Fphoto%2520gallery&amp;utmp=%2Fsite%2Fgj%2Fphoto%2520gallery&amp;guid=ON&amp;siteAlias=gj" />
+  <img src="/runtime/ga_duda.jsp?utmac=MA-7265702-9&amp;utmn=1212290068&amp;utmr=http%3A%2F%2Fmobile.dudamobile.com%2Fsite%2Fgj%2Fphoto%2520gallery&amp;utmp=%2Fsite%2Fgj%2Fphoto%2520gallery&amp;guid=ON&amp;siteAlias=gj" />
+  </noscript>
+<!-- note these also must be called after ajax -->
+<script>
+var dmForceShare = false;
+
+
+if (dmForceShare || $("#shareSection").length > 0 || $(".dmShare").length > 0 ){
+	//console.log('loading share');
+	dmLoadShare();
+}
+
+function dmLoadShare(){
+	/* google plus shares */
+	/*(function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();*/
+	$.ajax({
+        url: "https://apis.google.com/js/plusone.js",
+        dataType: "script", 
+        success: function () {}
+	});
+	
+	/* linked in shares */
+	$.ajax({
+	        url: "https://platform.linkedin.com/in.js",
+	        dataType: "script", 
+	        success: function () {}
+	});
+	
+	/* Twitter Shares */
+	$.ajax({
+	    url: "https://platform.twitter.com/widgets.js",
+	    dataType: "script", 
+	    success: function () {}
+	});
+}
+</script>
+
+<script>
+jQuery("img").error(function(){
+		jQuery(this).hide();
+	});
+</script>
+<div id="fb-root"></div>
+
+<!--  site ID: 294185 -->
+<!--  page ID: 19817610 -->
+<!--  generated: Thu Aug 08 20:51:23 UTC 2013 -->
+<!--  Server: platform-prod-4 --><div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose" onclick="dmHidePopup(event);"></div> </div> 
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div> </body>
+</html>
