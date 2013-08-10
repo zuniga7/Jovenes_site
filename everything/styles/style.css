@@ -1,14 +1,20 @@
 .nav-collapse.collapse { 
-    height: 0; overflow: visible; 
+        height: 0; overflow: visible; 
 }
 
 .navbar{
-    margin-bottom: 10px;
+        margin-bottom: 10px;
 }
 .title{
-	margin-top: 10px;
-	text-align: center;
-	font-size: 20px;
+	   margin-top: 10px;
+	   text-align: center;
+	   font-size: 20px;
+}
+.brand{
+    position: relative;
+    left: 18px;
+    text-align: center;
+    margin: auto;
 }
 
 .post{

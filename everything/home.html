@@ -22,8 +22,11 @@
     <div class='navbar navbar-static-top'>
       <div class="navbar-inner">
         <div class='container-fluid'>
-          <a href='#mypanel' class="btn" data-toggle="collapse" data-target="nav-collapse"><i class="icon-align-justify"></i></a>
-          <p class='title'>Grupo de Jovenes</p>
+           <a href='#panel-left' class="btn pull-left" data-toggle="collapse" data-target="nav-collapse"><i class="icon-align-justify"></i></a>
+            
+            <span class="brand" href="/">Grupo de Jovenes</span>
+
+            <a href='#panel-right' class="btn pull-right" data-toggle="collapse" data-target="nav-collapse"><i class="icon-edit"></i></a>
         </div> 
       </div>
     </div>
@@ -39,8 +42,8 @@
 
   </div>
 
-  <!-- panel -->
-  <div data-role="panel" id="mypanel" data-theme='b' data-display="push">
+  <!-- panel left -->
+  <div data-role="panel" id="panel-left" data-theme='b' data-display="push">
     <!-- menu -->
     <p class='title'>Grupo de Jovenes</p>
     <ul id='footer' class="nav nav-pills nav-stacked">
@@ -51,6 +54,11 @@
     </ul>
   </div>
 
+  <!-- panel right -->
+  <div data-role="panel" id="panel-right" data-theme='b' data-display="push" data-position="right">
+    <!-- menu -->
+    <p class='title'>Sign In</p>
+  </div>
 
 </div>
       <!-- javascript
