@@ -8,10 +8,41 @@ function start(){
 
 
 function addNews () {
-	
+
+	var request = new XMLHttpRequest();
+	request.open("GET", "", true);
+
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && request.status == 200) {
+		}
+	}
+	request.send
+
 }
 
-function signIn () {
+function processLogin() () {
+	var username = $("#user").val();
+	var password = $("#pass").val();
+
+	var request = new XMLHttpRequest();
+	request.open("GET", "processlogin.php?user="+username+"&pass="+password, true);
+
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && request.status == 200) {
+			var wasSuccessful = JSON.parse(request.responseText);
+			// valid login
+			if (wasSuccessful) {
+				addNewsForm();
+			} 
+			else{
+				badPass();
+			}
+		}
+	}
+	request.send
+}
+
+function addNewsForm () {
 	// body...
 }
 
