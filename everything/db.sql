@@ -6,6 +6,7 @@ CREATE TABLE `users`(
 
 CREATE TABLE `news`(
 	`id` INT(10) AUTO_INCREMENT,
+	`title` TEXT,	
 	`message` TEXT,	
 	`time` TIMESTAMP,
 	PRIMARY KEY(`id`)
