@@ -6,6 +6,17 @@ function start(){
   	});
 }
 
+function getNews () {
+	var request = new XMLHttpRequest();
+	request.open("GET", "", true);
+
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && request.status == 200) {
+			$(".news").append();
+		}
+	}
+	request.send
+}
 
 function addNews () {
 
@@ -48,12 +59,12 @@ function addNewsForm () {
 
 	
 	var form = "<div class='container'>"+
-    "  <form class='form-horizontal' id='newsform' method='post' onsubmit='addNews()'>"+
+    "  <form class='form-signin' id='newsform' method='post' onsubmit='addNews()'>"+
     "    <h2 class='heading'>New Message!</h2>"+
     "    <div class='alerts'></div>"+
     "     <div class='control-group'>"+
-    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title'>"+
-    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message'></textarea>"+
+    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
+    "        <textarea class='input-block-level' aid='newsMessage' placeholder='Message' required></textarea>"+
     "    </div>"+
     "    <button class='btn btn-primary btn-large' type='submit'>Submit</button>"+
     "  </form>"+
