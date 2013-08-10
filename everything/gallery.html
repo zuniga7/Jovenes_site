@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grupo de Jovenes</title>
+   
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- styles -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/flexslider.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+</head>
+
+<body>
+<div data-role='page'>
+
+  <div data-role='content'>
+
+    <!-- navbar -->
+    <div class='navbar navbar-static-top'>
+      <div class="navbar-inner">
+        <div class='container-fluid'>
+           <a href='#panel-left' class="btn pull-left" data-toggle="collapse" data-target="nav-collapse"><i class="icon-align-justify"></i></a>
+            
+            <span class="brand" href="/">Grupo de Jovenes</span>
+
+            <a href='#panel-right' class="btn pull-right" data-toggle="collapse" data-target="nav-collapse"><i class="icon-edit"></i></a>
+        </div> 
+      </div>
+    </div>
+
+    <div class='afterNavBar'>
+
+      <!-- slider / carousel -->
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="pictures/jovenes.jpg" />
+            <p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
+          </li>
+          <li>
+            <img src="pictures/luke923.jpg" />
+          </li>
+          <li>
+            <img src="pictures/prayer2.jpg" />
+          </li>
+          <li>
+            <img src="pictures/john832.jpg" />
+          </li>
+        </ul>
+      </div>  
+
+      <!-- news / post -->
+      <div class='news'>
+        <h2 class='page-header'>News</h2>
+        <div class='post'>
+          <h3 class='heading'>Title</h3>
+          <p class='message'>This is the first post and mainly for testing purposes.</p>
+          <div class='timestamp'></div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <!-- panel left -->
+  <div data-role="panel" id="panel-left" data-theme='b' data-display="push">
+    <!-- menu -->
+    <p class='title'>Grupo de Jovenes</p>
+    <ul id='footer' class="nav nav-pills nav-stacked">
+      <li> <a href="home.html"><i class="icon-home icon-white"></i> Home</a></li>
+      <li> <a href="gallery.html"><i class="icon-picture"></i> Gallery</a></li>
+      <li> <a href="preaches.html"><i class="icon-book"></i>  Preaches</a></li>
+      <li> <a href="about.html"><i class="icon-info-sign"></i> About</a></li>
+    </ul>
+  </div>
+
+  <!-- panel right -->
+  <div data-role="panel" id="panel-right" data-theme='b' data-display="push" data-position="right">
+    <!-- menu -->
+    <p class='title'>Sign In</p>
+
+    <div class="container">
+      <form class="form-signin" id="form" method = "post" onsubmit="processLogin()">
+        <h2 class="heading">Sign in!</h2>
+        <div class="alerts"></div>
+         <div class="control-group">
+            <input type="text" id="user" class="" name="username" placeholder="Username" required>
+            <input type="password" id="pass" class="" name="password" placeholder="Password" required>
+        </div>
+        <button class="btn btn-primary btn-large" type="submit">Sign In</button>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+      <!-- javascript
+      ==================================================
+      Placed at the end of the document so the pages load faster -->
+      <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="scripts/jquery.flexslider-min.js"></script>
+      <script src="scripts/scripts.js"></script>
+</body>
+</html>
