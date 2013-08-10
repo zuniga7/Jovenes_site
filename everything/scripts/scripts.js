@@ -20,7 +20,7 @@ function addNews () {
 
 }
 
-function processLogin() () {
+function processLogin () {
 	var username = $("#user").val();
 	var password = $("#pass").val();
 
