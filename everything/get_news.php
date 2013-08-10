@@ -4,6 +4,7 @@
 
 	$get_query = $db -> prepare("
 			SELECT * FROM `news`
+			ORDER BY `id` DESC
 			LIMIT 6;
 		");
 

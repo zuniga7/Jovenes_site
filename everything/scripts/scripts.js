@@ -4,31 +4,47 @@ function start(){
 	$('.flexslider').flexslider({
     animation: "slide"
   	});
+
+	// load news into page
+  	//getNews();
 }
 
 function getNews () {
 	var request = new XMLHttpRequest();
-	request.open("GET", "", true);
+	request.open("GET", "get_news.php", true);
 
 	request.onreadystatechange = function () {
 		if (request.readyState == 4 && request.status == 200) {
-			$(".news").append();
+			var six_news = JSON.parse(request.responseText);
+
+			// make a div for each news post
+			for(var x = 0; x < six_news.length; x++){
+				var post = "<div class='post'>"+
+		          "<h3 class='heading'>"+six_news[x]['title']+"</h3>"+
+		          "<p class='message'>"+six_news[x]['message']+"</p>"+
+		          "<div class='timestamp pull-right'>"+six_news[x]['time']+"</div>"+
+		        "</div>";
+			
+				$(".news").append(post);
+			}
 		}
 	}
 	request.send
 }
 
 function addNews () {
+	var title = $("#newsTitle").val();
+	var content = $("#newsMessage").val();
 
 	var request = new XMLHttpRequest();
-	request.open("GET", "", true);
+	request.open("GET", "add_news.php?title="+title+"&content="+content, true);
 
 	request.onreadystatechange = function () {
 		if (request.readyState == 4 && request.status == 200) {
+			registerSuccess();
 		}
 	}
 	request.send
-
 }
 
 function processLogin () {
@@ -64,7 +80,7 @@ function addNewsForm () {
     "    <div class='alerts'></div>"+
     "     <div class='control-group'>"+
     "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
-    "        <textarea class='input-block-level' aid='newsMessage' placeholder='Message' required></textarea>"+
+    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
     "    </div>"+
     "    <button class='btn btn-primary btn-large' type='submit'>Submit</button>"+
     "  </form>"+
