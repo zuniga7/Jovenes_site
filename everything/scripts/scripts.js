@@ -1,17 +1,10 @@
-//window.onload = start;
+window.onload = start;
 
-jQuery(function(){
-			
-	jQuery('#camera_wrap_2').camera({
-		height: '400px',
-		loader: 'bar',
-		pagination: false,
-		thumbnails: false
-	
-	});
-});
-
-
+function start(){
+	$('.flexslider').flexslider({
+    animation: "slide"
+  	});
+}
 
 
 function addNews () {
