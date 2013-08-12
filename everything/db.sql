@@ -1,6 +1,6 @@
 CREATE TABLE `users`(
 	`username` VARCHAR(30),
-	`password` VARCHAR(64),
+	`password` VARCHAR(65),
 	PRIMARY KEY(`username`)
 );
 
