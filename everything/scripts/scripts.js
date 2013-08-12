@@ -42,7 +42,7 @@ function processLogin () {
 		if (request.readyState == 4 && request.status == 200) {
 			var wasSuccessful = JSON.parse(request.responseText);
 			// valid login
-			if (wasSuccessful  == 1) {
+			if (wasSuccessful == 1) {
 				addNewsForm();
 			} 
 			else{

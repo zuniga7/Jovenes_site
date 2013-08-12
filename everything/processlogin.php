@@ -13,10 +13,11 @@
 	$query -> execute($values);
 
 	$actualPass = $query->fetchColumn(0);
-	//echo $actualPass;
+	//echo $actualPass."... ";
 
-	$hashed_password = crypt($_GET['password'], $actualPass);
+	$hashed_password = crypt($_GET['pass'], $actualPass);
 	$hashed_password = substr($hashed_password, 0, 65);
+	//echo $hashed_password;
 
 	# invalid login  
 	if ($hashed_password != $actualPass) {
