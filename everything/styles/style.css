@@ -17,6 +17,10 @@
     margin: auto;
 }
 
+#btn-features{
+    margin-bottom: 5px;
+}
+
 /*
 #panel-left{
     background: rgba(0,0,0,0.5);
@@ -38,7 +42,7 @@
 */
 
 .post{
-        padding: 19px 29px 29px;
+        padding: 12px 22px 22px;
         margin: 0 auto 20px;
         background-color: #fff;
         border: 1px solid #e5e5e5;
