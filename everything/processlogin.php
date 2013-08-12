@@ -20,10 +20,10 @@
 
 	# invalid login  
 	if ($hashed_password != $actualPass) {
-		echo False;
+		echo 0;
 	}
 	# login successful
 	else{
-		echo True;
+		echo 1;
 	}
 ?>

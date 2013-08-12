@@ -1,13 +1,12 @@
-window.onload = start;
-
-function start(){
-	$('.flexslider').flexslider({
-    animation: "slide"
-  	});
-
-	// load news into page
-  	//getNews();
-}
+// when window loads
+$(window).load(function() {
+    $('.flexslider').flexslider({
+        animation: "slide"
+    });
+  
+  	// load news into page
+  	getNews();
+});
 
 function getNews () {
 	var request = new XMLHttpRequest();
@@ -29,7 +28,49 @@ function getNews () {
 			}
 		}
 	}
-	request.send;
+	request.send();
+}
+
+function processLogin () {
+	var username = $("#user").val();
+	var password = $("#pass").val();
+
+	var request = new XMLHttpRequest();
+	request.open("GET", "processlogin.php?user="+username+"&pass="+password, true);
+
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && request.status == 200) {
+			var wasSuccessful = JSON.parse(request.responseText);
+			// valid login
+			if (wasSuccessful  == 1) {
+				addNewsForm();
+			} 
+			else{
+				badPass();
+			}
+		}
+	}
+	request.send();
+}
+
+function addNewsForm () {
+	$(".afterNavBar").empty();
+	$("#panel-right").panel("close");
+
+	
+	var form = "<div class='container'>"+
+    "  <form class='form-signin' id='newsform' action='javascript:addNews();'>"+
+    "    <h2 class='heading'>New Message!</h2>"+
+    "    <div class='alerts'></div>"+
+    "     <div class='control-group'>"+
+    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
+    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
+    "    </div>"+
+    "    <input type='submit' id='submitButton' class='btn btn-primary btn-large' value='Submit!'>"+
+    "  </form>"+
+    "</div>";
+
+    $(".afterNavBar").append(form);
 }
 
 function addNews () {
@@ -44,50 +85,7 @@ function addNews () {
 			registerSuccess();
 		}
 	}
-	request.send; 
-	return false;
-}
-
-function processLogin () {
-	var username = $("#user").val();
-	var password = $("#pass").val();
-
-	var request = new XMLHttpRequest();
-	request.open("GET", "processlogin.php?user="+username+"&pass="+password, true);
-
-	request.onreadystatechange = function () {
-		if (request.readyState == 4 && request.status == 200) {
-			var wasSuccessful = JSON.parse(request.responseText);
-			// valid login
-			if (wasSuccessful) {
-				addNewsForm();
-			} 
-			else{
-				badPass();
-			}
-		}
-	}
-	request.send;
-}
-
-function addNewsForm () {
-	$(".afterNavBar").empty();
-	$("#panel-right").panel("close");
-
-	
-	var form = "<div class='container'>"+
-    "  <form class='form-signin' id='newsform' onsubmit='return addNews();'>"+
-    "    <h2 class='heading'>New Message!</h2>"+
-    "    <div class='alerts'></div>"+
-    "     <div class='control-group'>"+
-    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
-    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
-    "    </div>"+
-    "    <input id='submitButton' class='btn btn-primary btn-large' type='submit' value='Submit!'>"+
-    "  </form>"+
-    "</div>";
-
-    $(".afterNavBar").append(form);
+	request.send();
 }
 
 function badPass () {

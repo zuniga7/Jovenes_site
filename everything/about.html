@@ -67,13 +67,13 @@
     <h3 class="heading text-center">Sign in!</h3>
 
     <div class="container">
-      <form class="form-signin" id="form">
+      <form class="form-signin" id="form" action='javascript:processLogin();'>
         <div class="alerts"></div>
          <div class="control-group">
             <input type="text" id="user" class="" name="username" placeholder="Username" required>
             <input type="password" id="pass" class="" name="password" placeholder="Password" required>
         </div>
-        <input type="button" onclick='processLogin()' class="btn btn-primary btn-large" value='Sign In'>
+        <input type="submit" class="btn btn-primary btn-large" value='Sign In'>
       </form>
 
     </div>
