@@ -25,7 +25,7 @@
         <div class='container-fluid'>
            <a href='#panel-left' class="btn pull-left" data-toggle="collapse" data-target="nav-collapse"><i class="icon-align-justify"></i></a>
             
-            <span class="brand" href="/">Grupo de Jovenes</span>
+            <span class="brand">Grupo de Jovenes</span>
 
             <a href='#panel-right' class="btn pull-right" data-toggle="collapse" data-target="nav-collapse"><i class="icon-edit"></i></a>
         </div> 
@@ -38,17 +38,17 @@
       <div class="flexslider">
         <ul class="slides">
           <li>
-            <img src="pictures/jovenes.jpg" />
+            <img src="pictures/jovenes.jpg" alt='image'/>
             <p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
           </li>
           <li>
-            <img src="pictures/luke923.jpg" />
+            <img src="pictures/luke923.jpg" alt='image'/>
           </li>
           <li>
-            <img src="pictures/prayer2.jpg" />
+            <img src="pictures/prayer2.jpg" alt='image'/>
           </li>
           <li>
-            <img src="pictures/john832.jpg" />
+            <img src="pictures/john832.jpg" alt='image'/>
           </li>
         </ul>
       </div>  
@@ -64,34 +64,35 @@
       </div>
     </div>
   
+
+
   </div>
   
   <!-- panel left -->
-  <div data-role="panel" id="panel-left" data-theme='b' data-display="push">
+  <div data-role="panel" data-theme='a' id="panel-left" data-display="reveal">
     <!-- menu -->
-    <p class='title'>Grupo de Jovenes</p>
-    <ul id='footer' class="nav nav-pills nav-stacked">
-      <li> <a href="home.html"><i class="icon-home icon-white"></i> Home</a></li>
-      <li> <a href="gallery.html"><i class="icon-picture"></i> Gallery</a></li>
-      <li> <a href="preaches.html"><i class="icon-book"></i>  Preaches</a></li>
-      <li> <a href="about.html"><i class="icon-info-sign"></i> About</a></li>
+    <h3 class="heading text-center">N.A. Jovenes</h3>
+    <ul id='footer' data-role='listview' data-icon='false' data-theme='a' class="nav nav-stacked">
+      <li> <a class='ui-btn-active' href="home.html"><i class="icon-home icon-white"></i> Home</a></li>
+      <li> <a href="gallery.html"><i class="icon-picture icon-white"></i> Gallery</a></li>
+      <li> <a href="preaches.html"><i class="icon-book icon-white"></i> Preaches</a></li>
+      <li> <a href="about.html"><i class="icon-info-sign icon-white"></i> About</a></li>
     </ul>
   </div>
 
   <!-- panel right -->
-  <div data-role="panel" id="panel-right" data-theme='b' data-display="push" data-position="right">
+  <div data-role="panel" id="panel-right" data-theme='a' data-display="reveal" data-position="right">
     <!-- menu -->
-    <p class='title'>Sign In</p>
+    <h3 class="heading text-center">Sign in!</h3>
 
     <div class="container">
-      <form class="form-signin" id="form" method = "post" onsubmit="processLogin()">
-        <h2 class="heading">Sign in!</h2>
+      <form class="form-signin" id="form">
         <div class="alerts"></div>
          <div class="control-group">
             <input type="text" id="user" class="" name="username" placeholder="Username" required>
             <input type="password" id="pass" class="" name="password" placeholder="Password" required>
         </div>
-        <button class="btn btn-primary btn-large" type="submit">Sign In</button>
+        <input type="button" onclick='processLogin()' class="btn btn-primary btn-large" value='Sign In'>
       </form>
 
     </div>

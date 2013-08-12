@@ -5,11 +5,11 @@
 .navbar{
         margin-bottom: 10px;
 }
-.title{
-	   margin-top: 10px;
-	   text-align: center;
-	   font-size: 20px;
+.heading{
+	/*   font-size: 20px; */
+    color: lightskyblue;
 }
+
 .brand{
     position: relative;
     left: 18px;
@@ -17,6 +17,11 @@
     margin: auto;
 }
 
+/*
+#panel-left{
+    background: rgba(0,0,0,0.5);
+}
+*/
 /*
 .flex-caption{
         width: 8.33%;

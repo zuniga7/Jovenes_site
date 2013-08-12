@@ -29,7 +29,7 @@ function getNews () {
 			}
 		}
 	}
-	request.send
+	request.send;
 }
 
 function addNews () {
@@ -44,7 +44,8 @@ function addNews () {
 			registerSuccess();
 		}
 	}
-	request.send
+	request.send; 
+	return false;
 }
 
 function processLogin () {
@@ -66,7 +67,7 @@ function processLogin () {
 			}
 		}
 	}
-	request.send
+	request.send;
 }
 
 function addNewsForm () {
@@ -75,14 +76,14 @@ function addNewsForm () {
 
 	
 	var form = "<div class='container'>"+
-    "  <form class='form-signin' id='newsform' method='post' onsubmit='addNews()'>"+
+    "  <form class='form-signin' id='newsform' onsubmit='return addNews();'>"+
     "    <h2 class='heading'>New Message!</h2>"+
     "    <div class='alerts'></div>"+
     "     <div class='control-group'>"+
     "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
     "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
     "    </div>"+
-    "    <button class='btn btn-primary btn-large' type='submit'>Submit</button>"+
+    "    <input id='submitButton' class='btn btn-primary btn-large' type='submit' value='Submit!'>"+
     "  </form>"+
     "</div>";
 
