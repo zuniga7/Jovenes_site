@@ -77,6 +77,10 @@ function addNews () {
 	var title = $("#newsTitle").val();
 	var content = $("#newsMessage").val();
 
+	if (title == "" || content == "") {
+		return;
+	}
+
 	var request = new XMLHttpRequest();
 	request.open("GET", "add_news.php?title="+title+"&content="+content, true);
 
