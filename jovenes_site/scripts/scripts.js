@@ -1,5 +1,5 @@
 // when window loads
-$(window).load(function() {
+$(window).load(function() {	
     $('.flexslider').flexslider({
         animation: "slide"
     });
