@@ -6,6 +6,8 @@ $(window).load(function() {
   
   	// load news into page
   	getNews();
+  	// load videos into preaches page
+  	getYoutubeVideos();
 });
 
 function getNews () {
@@ -92,6 +94,37 @@ function addNews () {
 		}
 	}
 	request.send();
+}
+
+function getYoutubeVideos () {
+	var playListURL = 'http://gdata.youtube.com/feeds/mobile/users/dlopez3434/uploads?alt=json&orderby=published&format=1,6';	
+	var videoURL= 'http://www.youtube.com/watch?v=';
+	$.getJSON(playListURL, function(data) {
+	    var list_data="";
+	    $.each(data.feed.entry, function(i, item) {
+	        var feedTitle = item.title.$t;
+	        var feedDesc = item.media$group.media$description.$t;
+	        var feedURL = item.link[1].href;
+	        var fragments = feedURL.split("/");
+	        var videoID = fragments[fragments.length - 2];
+	        var url = videoURL + videoID;
+	        var thumb = "http://img.youtube.com/vi/"+ videoID +"/default.jpg";
+	        list_data += ""+
+	        "<li data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='div' data-icon='arrow-r' data-iconpos='right' data-theme='c' class='ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-btn-up-c'>"+
+		        "<div class='ui-btn-inner ui-li'>"+
+			        "<div class='ui-btn-text'>"+
+				        "<a class='ui-link-inherit' href=" +url+ " title=" +feedTitle+ ">"+
+				        	"<img class='ui-li-thumb' alt=" +feedTitle+ " src="+ thumb +">"+
+				        	"<h3 class='ui-li-heading'>"+feedTitle+"</h3>"+
+				        	"<p class='ui-li-desc'>"+feedDesc+"</p>"+
+				        "</a>"+
+			        "</div>"+
+			        "<span class='ui-icon ui-icon-arrow-r ui-icon-shadow'>&nbsp;</span>"+
+		        "</div>"+
+	        "</li>";
+	    });
+	    $(list_data).appendTo("#yt-list");
+	});
 }
 
 function badPass () {
