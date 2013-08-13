@@ -43,7 +43,24 @@ function processLogin () {
 			var wasSuccessful = JSON.parse(request.responseText);
 			// valid login
 			if (wasSuccessful == 1) {
-				addNewsForm();
+				// close panel & empty page content
+				$(".afterNavBar").empty();
+				$("#panel-right").panel("close");				
+
+				// show form
+				var form = "<div class='container'>"+
+			    "  <form class='form-signin' id='newsform' action='javascript:addNews();'>"+
+			    "    <h2 class='heading'>New Message!</h2>"+
+			    "    <div class='alerts'></div>"+
+			    "     <div class='control-group'>"+
+			    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
+			    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
+			    "    </div>"+
+			    "    <input type='submit' id='submitButton' class='btn btn-primary btn-large' value='Submit!'>"+
+			    "  </form>"+
+			    "</div>";				
+
+		    $(".afterNavBar").append(form);
 			} 
 			else{
 				badPass();
@@ -51,26 +68,6 @@ function processLogin () {
 		}
 	}
 	request.send();
-}
-
-function addNewsForm () {
-	$(".afterNavBar").empty();
-	$("#panel-right").panel("close");
-
-	
-	var form = "<div class='container'>"+
-    "  <form class='form-signin' id='newsform' action='javascript:addNews();'>"+
-    "    <h2 class='heading'>New Message!</h2>"+
-    "    <div class='alerts'></div>"+
-    "     <div class='control-group'>"+
-    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
-    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
-    "    </div>"+
-    "    <input type='submit' id='submitButton' class='btn btn-primary btn-large' value='Submit!'>"+
-    "  </form>"+
-    "</div>";
-
-    $(".afterNavBar").append(form);
 }
 
 function addNews () {
