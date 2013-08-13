@@ -1,6 +1,6 @@
 <?php
 
- 	// session_start();
+ 	session_start();
 
  	// Enables PHP errors to be shown in the browser
  	ini_set("display_errors", 1);

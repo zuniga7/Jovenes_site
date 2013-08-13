@@ -43,6 +43,8 @@ function processLogin () {
 			var wasSuccessful = JSON.parse(request.responseText);
 			// valid login
 			if (wasSuccessful == 1) {
+				registerSuccess();
+
 				// close panel & empty page content
 				$(".afterNavBar").empty();
 				$("#panel-right").panel("close");				
@@ -60,11 +62,14 @@ function processLogin () {
 			    "  </form>"+
 			    "</div>";				
 
-		    $(".afterNavBar").append(form);
+		    	$(".afterNavBar").append(form);
 			} 
 			else{
 				badPass();
 			}
+			// erase the user/pass fields
+			$("#user").val("");
+			$("#pass").val("");
 		}
 	}
 	request.send();
@@ -91,13 +96,20 @@ function addNews () {
 
 function badPass () {
 	$(".control-group").attr("class", "control-group error");
-	var alert = $(".alerts");
+	var alert = $("#form-alert");
+	alert.empty();
 	alert.attr("class", "alert alert-block alert-error fade in");
 	alert.append('<h4 class="alert-heading">Invalid Login!</h4>Bad username and password combination!');
 }
 
 function registerSuccess () {
+	// reset sign in form
+	$("#form-alert").empty();
+	$("#form-alert").attr("class", "alerts");
+	
+	// all alerts
 	var alert = $(".alerts");
+	alert.empty();
 	alert.attr("class", "alert alert-block alert-success fade in");
 	alert.append('<h4 class="alert-heading">Success!</h4>Your action was completed successfully!');
 }
