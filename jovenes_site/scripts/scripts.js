@@ -97,7 +97,7 @@ function addNews () {
 }
 
 function getYoutubeVideos () {
-	var playListURL = 'http://gdata.youtube.com/feeds/mobile/users/dlopez3434/uploads?alt=json&orderby=published&format=1,6';	
+	var playListURL = 'http://gdata.youtube.com/feeds/mobile/users/ixoyenog/uploads?alt=json&orderby=published&format=1,6';	
 	var videoURL= 'http://www.youtube.com/watch?v=';
 	$.getJSON(playListURL, function(data) {
 	    var list_data="";
