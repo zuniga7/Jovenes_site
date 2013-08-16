@@ -3,7 +3,7 @@ $(window).load(function() {
     $('.flexslider').flexslider({
         animation: "slide"
     });
-  
+
   	// load news into page
   	getNews();
   	// load videos into preaches page
@@ -80,20 +80,20 @@ function processLogin () {
 function addNews () {
 	var title = $("#newsTitle").val();
 	var content = $("#newsMessage").val();
-
+	var file = "add_news.php?title="+title+"&content="+content;
+	
 	if (title == "" || content == "") {
 		return;
 	}
-
-	var request = new XMLHttpRequest();
-	request.open("GET", "add_news.php?title="+title+"&content="+content, true);
-
-	request.onreadystatechange = function () {
-		if (request.readyState == 4 && request.status == 200) {
-			registerSuccess();
-		}
-	}
-	request.send();
+	
+	// jquery ajax request
+	$.ajax({
+        type: 'GET',
+        url: file,
+        success:function(data){
+           registerSuccess();
+        }
+    });
 }
 
 function getYoutubeVideos () {
