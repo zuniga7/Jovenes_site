@@ -1,9 +1,9 @@
+// for reference... 
+/* 
 // when window loads
 $(window).load(function() {	
     // start carousal
-    $('.flexslider').flexslider({
-        animation: "slide"
-    });
+    startCarousal();
 
   	// load news into page
   	getNews();
@@ -14,7 +14,13 @@ $(window).load(function() {
     // get gallery feed
     getGalleryFeed();
 });
+*/
 
+function startCarousal () {
+    $('.flexslider').flexslider({
+        animation: "slide"
+    });
+}
 function getNews () {
 	var request = new XMLHttpRequest();
 	request.open("GET", "get_news.php", true);
