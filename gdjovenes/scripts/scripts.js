@@ -1,13 +1,18 @@
 // when window loads
 $(window).load(function() {	
+    // start carousal
     $('.flexslider').flexslider({
         animation: "slide"
     });
 
   	// load news into page
   	getNews();
+
   	// load videos into preaches page
   	getYoutubeVideos();
+
+    // get gallery feed
+    getGalleryFeed();
 });
 
 function getNews () {
@@ -31,6 +36,60 @@ function getNews () {
 		}
 	}
 	request.send();
+}
+
+function getYoutubeVideos () {
+	var playListURL = 'http://gdata.youtube.com/feeds/mobile/users/ixoyenog/uploads?alt=json&orderby=published&format=1,6';	
+	var videoURL= 'http://www.youtube.com/watch?v=';
+	$.getJSON(playListURL, function(data) {
+	    var list_data="";
+	    $.each(data.feed.entry, function(i, item) {
+	        var feedTitle = item.title.$t;
+	        var feedDesc = item.media$group.media$description.$t;
+	        var feedURL = item.link[1].href;
+	        var fragments = feedURL.split("/");
+	        var videoID = fragments[fragments.length - 2];
+	        var url = videoURL + videoID;
+	        var thumb = "http://img.youtube.com/vi/"+ videoID +"/default.jpg";
+	        list_data += ""+
+	        "<li data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='div' data-icon='arrow-r' data-iconpos='right' data-theme='c' class='ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-btn-up-c'>"+
+		        "<div class='ui-btn-inner ui-li'>"+
+			        "<div class='ui-btn-text'>"+
+				        "<a class='ui-link-inherit' href=" +url+ " title=" +feedTitle+ ">"+
+				        	"<img class='ui-li-thumb' alt=" +feedTitle+ " src="+ thumb +">"+
+				        	"<h3 class='ui-li-heading'>"+feedTitle+"</h3>"+
+				        	"<p class='ui-li-desc'>"+feedDesc+"</p>"+
+				        "</a>"+
+			        "</div>"+
+			        "<span class='ui-icon ui-icon-arrow-r ui-icon-shadow'>&nbsp;</span>"+
+		        "</div>"+
+	        "</li>";
+	    });
+	    $(list_data).appendTo("#yt-list");
+	});
+}
+
+function getGalleryFeed () {
+    var feed = new Instafeed({
+    	clientId: 'ef0bbd19aa4547dbaca0fa96ef0b30dd',
+        get: 'tagged',
+        tagName: 'Nog4Jesus',
+        limit: 30,
+        template: '<a href="{{link}}"><img class="feed-image" src="{{image}}"/></a>',
+        after: function () {
+		    var images = $("#instafeed").find('a');
+		    $.each(images, function(index, image) {
+		      var delay = (index * 75) + 'ms';
+		      $(image).css('-webkit-animation-delay', delay);
+		      $(image).css('-moz-animation-delay', delay);
+		      $(image).css('-ms-animation-delay', delay);
+		      $(image).css('-o-animation-delay', delay);
+		      $(image).css('animation-delay', delay);
+		      $(image).addClass('animated flipInX');
+    		});
+  		}
+    });
+    feed.run();
 }
 
 function processLogin () {
@@ -96,36 +155,6 @@ function addNews () {
     });
 }
 
-function getYoutubeVideos () {
-	var playListURL = 'http://gdata.youtube.com/feeds/mobile/users/ixoyenog/uploads?alt=json&orderby=published&format=1,6';	
-	var videoURL= 'http://www.youtube.com/watch?v=';
-	$.getJSON(playListURL, function(data) {
-	    var list_data="";
-	    $.each(data.feed.entry, function(i, item) {
-	        var feedTitle = item.title.$t;
-	        var feedDesc = item.media$group.media$description.$t;
-	        var feedURL = item.link[1].href;
-	        var fragments = feedURL.split("/");
-	        var videoID = fragments[fragments.length - 2];
-	        var url = videoURL + videoID;
-	        var thumb = "http://img.youtube.com/vi/"+ videoID +"/default.jpg";
-	        list_data += ""+
-	        "<li data-corners='false' data-shadow='false' data-iconshadow='true' data-wrapperels='div' data-icon='arrow-r' data-iconpos='right' data-theme='c' class='ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-thumb ui-btn-up-c'>"+
-		        "<div class='ui-btn-inner ui-li'>"+
-			        "<div class='ui-btn-text'>"+
-				        "<a class='ui-link-inherit' href=" +url+ " title=" +feedTitle+ ">"+
-				        	"<img class='ui-li-thumb' alt=" +feedTitle+ " src="+ thumb +">"+
-				        	"<h3 class='ui-li-heading'>"+feedTitle+"</h3>"+
-				        	"<p class='ui-li-desc'>"+feedDesc+"</p>"+
-				        "</a>"+
-			        "</div>"+
-			        "<span class='ui-icon ui-icon-arrow-r ui-icon-shadow'>&nbsp;</span>"+
-		        "</div>"+
-	        "</li>";
-	    });
-	    $(list_data).appendTo("#yt-list");
-	});
-}
 
 function badPass () {
 	$(".control-group").attr("class", "control-group error");
