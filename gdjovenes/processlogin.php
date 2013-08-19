@@ -25,9 +25,10 @@
 	}
 	# login successful
 	else{
-		if(!isset($_SESSION)){ 	
+		if(!isset($_SESSION['username'])){ 	
 			session_start();
 			$_SESSION['username'] = $_GET['user'];
+
 		}
 		echo 1;
 	}

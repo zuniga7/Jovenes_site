@@ -150,7 +150,7 @@ function addNews () {
 	if (title == "" || content == "") {
 		return;
 	}
-	
+
 	// jquery ajax request
 	$.ajax({
         type: 'GET',

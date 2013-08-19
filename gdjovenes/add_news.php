@@ -18,5 +18,12 @@
 			");
 		
 		$final_query -> execute($values);
+
+		echo 1;
 	}
+	// used to debug
+	else{
+		echo 0;
+	}
+		
 ?>
