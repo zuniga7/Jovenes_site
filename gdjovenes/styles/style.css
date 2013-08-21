@@ -57,20 +57,15 @@
 
 
 .flex-caption{
-/*
-    width: 8.33%;
-    position: absolute;
-    left: 5;
-    bottom: 50;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
+    background-color: #5396fa;
+    opacity:0.6;  
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-    font-size: 14px;
+    padding: 10px;
+    font-size: 18px;
     line-height: 18px;
-*/
-
-
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    margin-bottom: 0;
 }
 
 
