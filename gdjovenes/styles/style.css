@@ -18,6 +18,12 @@
     margin: auto;
 }
 
+#slider{
+    margin: auto;
+    max-height: 700px;
+    max-width: 700px;
+}
+
 #btn-features{
     margin-bottom: 5px;
 }
@@ -48,20 +54,25 @@
     background: rgba(0,0,0,0.5);
 }
 */
-/*
+
+
 .flex-caption{
-        width: 8.33%;
-        position: absolute;
-        left: 5;
-        bottom: 50;
-        background: rgba(0,0,0,0.6);
-        color: #fff;
-        text-align: center;
-        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-        font-size: 14px;
-        line-height: 18px;
-}
+/*
+    width: 8.33%;
+    position: absolute;
+    left: 5;
+    bottom: 50;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    font-size: 14px;
+    line-height: 18px;
 */
+
+
+}
+
 
 .post{
         padding: 12px 22px 22px;

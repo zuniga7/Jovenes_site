@@ -36,23 +36,25 @@
     <div class='afterNavBar'>
 
       <!-- slider / carousel -->
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <img src="pictures/jovenes.jpg" alt='image'/>
-            <p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
-          </li>
-          <li>
-            <img src="pictures/luke923.jpg" alt='image'/>
-          </li>
-          <li>
-            <img src="pictures/prayer2.jpg" alt='image'/>
-          </li>
-          <li>
-            <img src="pictures/john832.jpg" alt='image'/>
-          </li>
-        </ul>
-      </div>  
+      <div class="flex-container" id='slider'>
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="pictures/jovenes.jpg" alt='image'/>
+              <p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
+            </li>
+            <li>
+              <img src="pictures/luke923.jpg" alt='image'/>
+            </li>
+            <li>
+              <img src="pictures/prayer2.jpg" alt='image'/>
+            </li>
+            <li>
+              <img src="pictures/john832.jpg" alt='image'/>
+            </li>
+          </ul>
+        </div>  
+      </div>
 
       <!-- news / post -->
       <div class='news'>
@@ -103,7 +105,7 @@
       <script src="bootstrap/js/bootstrap.min.js"></script>
       <script src="scripts/jquery.flexslider-min.js"></script>
       <script src="scripts/scripts.js"></script>
-      <script type="text/javascript">
+      <script type="text/javascript" charset="utf-8">
       // when window loads
       $(window).load(function() { 
           startCarousal();

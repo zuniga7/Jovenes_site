@@ -18,7 +18,10 @@ $(window).load(function() {
 
 function startCarousal () {
     $('.flexslider').flexslider({
-        animation: "slide"
+        animation: "slide",
+        smoothHeight: true,
+        prevText: "",
+        nextText: "",
     });
 }
 function getNews () {
