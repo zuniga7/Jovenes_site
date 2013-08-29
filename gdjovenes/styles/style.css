@@ -7,10 +7,17 @@
     margin-bottom: 10px;
 }
 .heading{
-	/*   font-size: 20px; 
-         
-    font-family:'HelveticaNeueW01-UltLtE 710282'; */
+	/*   font-size: 20px; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
     color: lightskyblue;
+}
+li a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+.icon-white{
+    margin-right: 10px;
 }
 
 .brand{
