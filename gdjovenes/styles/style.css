@@ -6,25 +6,40 @@
 .navbar{
     margin-bottom: 10px;
 }
+.brand{
+    position: relative;
+    left: 18px;
+    text-align: center;
+    margin: auto;
+}
+
 .heading{
 	/*   font-size: 20px; */
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     color: lightskyblue;
 }
+
+/* youtube videos list */
+.ui-li-heading{
+    margin: 0;
+    padding: 0;
+}
+
+.ui-li-thumb{
+    width: 80px;
+    height: 80px;
+    margin-left: 1px;
+}
+
+/* list font */
 li a{
     font-family: 'Lato', sans-serif;
     font-weight: 500;
 }
+
 .icon-white{
     margin-right: 10px;
-}
-
-.brand{
-    position: relative;
-    left: 18px;
-    text-align: center;
-    margin: auto;
 }
 
 #slider{
