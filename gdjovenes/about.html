@@ -46,6 +46,7 @@
         <div id='btn-features'>
           <button class='btn btn-large btn-block btn-primary' onclick="location.href='https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&authuser=0&q=1481+North+Industrial+Park+Drive,+Nogales,+AZ+85621&aq=&vps=1&sll=32.15591,-110.883805&sspn=0.349952,0.574722&vpsrc=3&ie=UTF8&hq=&hnear=1481+N+Industrial+Park+Dr,+Nogales,+Arizona+85621'">Map</button>
           <button class='btn btn-large btn-block btn-primary' onclick="location.href='https://www.facebook.com/nuevoamanecer.grupodejovenes'">Facebook</button>
+          <button class='disabled btn btn-large btn-block btn-primary' onclick="location.href='#'">Give</button>
         </div>
         <div class='post'>
           <h3 class='heading'>Quienes Somos</h3>
@@ -87,14 +88,18 @@ Tambien tenemos el grupo de liderazgo donde preparamos a los j&oacute;venes para
     <div class="container">
       <form class="form-signin" id="form" action='javascript:processLogin();'>
         <div id='form-alert' class="alerts"></div>
-         <div class="control-group">
-            <input type="text" id="user" class="" name="username" placeholder="Username" required>
-            <input type="password" id="pass" class="" name="password" placeholder="Password" required>
-        </div>
+        <div class="control-group">
+          <div> 
+            <input type="text" data-role='none' id="user" class="" name="username" placeholder="Username" required>
+          </div> 
+          <div> 
+            <input type="password" data-role='none' id="pass" class="" name="password" placeholder="Password" required>
+          </div>
+        </div>  
         <input type="submit" class="btn btn-primary btn-large" value='Sign In'>
       </form>
-
     </div>
+ 
   </div>
 
 </div>

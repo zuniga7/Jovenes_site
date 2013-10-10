@@ -44,17 +44,24 @@
         <div class="flexslider">
           <ul class="slides">
             <li>
-              <img src="pictures/jovenes.jpg" alt='image'/>
-              <p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
+              <a href="https://www.facebook.com/nuevoamanecer.grupodejovenes">
+                <img src="pictures/jovenes.jpg" alt='image'/>
+                <p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
+              </a>
+            </li>
+            <li id='yt'>
             </li>
             <li>
-              <img src="pictures/luke923.jpg" alt='image'/>
+              <a href="https://www.facebook.com/groups/306755496137707?ref=bookmark">
+                <img src="pictures/oracion.jpg" alt='image'/>
+                <p class="flex-caption">Grupo de Oracion</p>
+              </a>
             </li>
             <li>
-              <img src="pictures/prayer2.jpg" alt='image'/>
-            </li>
-            <li>
-              <img src="pictures/john832.jpg" alt='image'/>
+              <a href="https://www.facebook.com/groups/226132897540016/">
+                <img src="pictures/john832.jpg" alt='image'/>
+                <p class="flex-caption">Grupo Devocional</p>
+              </a>
             </li>
           </ul>
         </div>  
@@ -74,7 +81,7 @@
     <!-- menu -->
     <h3 class="heading text-center">IXOYE GDJ</h3>
     <ul id='footer' data-role='listview' data-icon='false' data-theme='f' class="nav nav-stacked">
-      <li> <a class='ui-btn-active' href="home.html"><i class="icon-home icon-white"></i> Home</a></li>
+      <li> <a class='ui-btn-active ui-state-persist' href="home.html"><i class="icon-home icon-white"></i> Home</a></li>
       <li> <a href="gallery.html" rel="external"><i class="icon-picture icon-white"></i> Gallery</a></li>
       <li> <a href="preachings.html" rel="external"><i class="icon-book icon-white"></i> Preachings</a></li>
       <li> <a href="resources.html"><i class="icon-envelope icon-white"></i> Resources</a></li>
@@ -90,14 +97,18 @@
     <div class="container">
       <form class="form-signin" id="form" action='javascript:processLogin();'>
         <div id='form-alert' class="alerts"></div>
-         <div class="control-group">
-            <input type="text" id="user" class="" name="username" placeholder="Username" required>
-            <input type="password" id="pass" class="" name="password" placeholder="Password" required>
-        </div>
+        <div class="control-group">
+          <div> 
+            <input type="text" data-role='none' id="user" class="" name="username" placeholder="Username" required>
+          </div> 
+          <div> 
+            <input type="password" data-role='none' id="pass" class="" name="password" placeholder="Password" required>
+          </div>
+        </div>  
         <input type="submit" class="btn btn-primary btn-large" value='Sign In'>
       </form>
-
     </div>
+    
   </div>
 
 </div>
@@ -114,7 +125,10 @@
       $(window).load(function() { 
           startCarousal();
           getNews();
+          homePageFirstYoutubeVid();
       });
       </script>
 </body>
 </html>
+
+

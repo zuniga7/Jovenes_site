@@ -24,6 +24,7 @@ function startCarousal () {
         nextText: "",
     });
 }
+
 function getNews () {
 	var request = new XMLHttpRequest();
 	request.open("GET", "get_news.php", true);
@@ -45,6 +46,30 @@ function getNews () {
 		}
 	}
 	request.send();
+}
+
+function homePageFirstYoutubeVid () {
+	var playListURL = 'http://gdata.youtube.com/feeds/mobile/users/ixoyenog/uploads?alt=json&orderby=published&format=1,6';	
+	var videoURL= 'http://www.youtube.com/watch?v=';
+	$.getJSON(playListURL, function(data) {
+	    var list_data="";
+	    $.each(data.feed.entry, function(i, item) {
+	        var feedTitle = item.title.$t;
+	        var feedDesc = item.media$group.media$description.$t;
+	        var feedURL = item.link[1].href;
+	        var fragments = feedURL.split("/");
+	        var videoID = fragments[fragments.length - 2];
+	        var url = videoURL + videoID;
+	        var thumb = "http://img.youtube.com/vi/"+ videoID +"/hqdefault.jpg";
+	        list_data += ""+
+	        "<a href=" +url+ " title=" +feedTitle+ ">"+
+	        	"<img class='' alt=" +feedTitle+ " src="+ thumb +">"+
+	        	"<p class='flex-caption'>" +feedTitle+ "</p>"+
+	        "</a>"
+	        return false;
+	        });
+	    $("#yt").append(list_data);
+	    });
 }
 
 function getYoutubeVideos () {
@@ -80,6 +105,7 @@ function getGalleryFeed () {
     	clientId: 'ef0bbd19aa4547dbaca0fa96ef0b30dd',
         get: 'tagged',
         tagName: 'Nog4Jesus',
+        pages: instafeedPages,
         limit: 30,
         template: '<a href="{{link}}"><img class="feed-image" src="{{image}}"/></a>',
         after: function () {
@@ -96,6 +122,13 @@ function getGalleryFeed () {
   		}
     });
     feed.run();
+}
+
+var instafeedPages = 1;
+function getMoreImages () {
+	instafeedPages += 1;
+	$("#instafeed").empty();
+	getGalleryFeed();
 }
 
 function processLogin () {

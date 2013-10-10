@@ -1,3 +1,9 @@
+/* body -- change jquery mobile's default background */
+.ui-panel-content-wrap {
+    background: url('grain.png') repeat top center;
+}
+
+/* navbar */
 .nav-collapse.collapse { 
     height: 0; 
     overflow: visible; 
@@ -13,6 +19,7 @@
     margin: auto;
 }
 
+/* any heading */
 .heading{
 	/*   font-size: 20px; */
     font-family: 'Lato', sans-serif;
@@ -32,7 +39,7 @@
     margin-left: 1px;
 }
 
-/* list font */
+/* panel / list font */
 li a{
     font-family: 'Lato', sans-serif;
     font-weight: 500;
@@ -42,20 +49,41 @@ li a{
     margin-right: 10px;
 }
 
+/* flexslider */
 #slider{
     margin: auto;
     max-height: 700px;
     max-width: 700px;
+
 }
 
-#btn-features{
-    margin-bottom: 5px;
+.slides li img{
+    max-height: 450px;
 }
 
-#img-more{
-    margin-bottom: 5px;
+/* see... http://stackoverflow.com/questions/16402502/automatically-resize-image-to-fit-flex-slider*/
+@media only screen and (max-width: 480px) {
+    .slides li img {height:200px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+    .slides li img {height:220px;}
+    #slider {width:420px;}
 }
 
+.flex-caption{
+    background-color: #5396fa;
+    opacity:0.6;  
+    text-align: center;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: normal; /*why some bold?*/
+    line-height: 18px;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    margin-bottom: 0;
+}
+
+/* instafeed */
 #instafeed a {
     padding: 5px 5px 5px 5px;
     margin: 5px;
@@ -73,35 +101,31 @@ li a{
     margin-bottom: 3px;
 }
 
+/* misc */
+#btn-features{
+    margin-bottom: 5px;
+}
+
+#img-more{
+    margin-bottom: 5px;
+}
+
 /*
 #panel-left{
     background: rgba(0,0,0,0.5);
 }
 */
 
-
-.flex-caption{
-    background-color: #5396fa;
-    opacity:0.6;  
-    text-align: center;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 18px;
-    color: white;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-    margin-bottom: 0;
-}
-
-
+/* news post */
 .post{
-        padding: 12px 22px 22px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    padding: 12px 22px 22px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
