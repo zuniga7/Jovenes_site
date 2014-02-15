@@ -1,9 +1,15 @@
-/* body -- change jquery mobile's default background */
-.ui-panel-content-wrap {
-    background: url('grain.png') repeat top center;
+body {
 }
 
-/* navbar */
+#content{
+    padding-top: 50px;
+    background: url('grain.png') repeat top center;
+}
+.news{
+    padding: 5px;
+}
+
+/* navbar
 .nav-collapse.collapse { 
     height: 0; 
     overflow: visible; 
@@ -19,12 +25,55 @@
     margin: auto;
 }
 
+.navbar .brand {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  float: none;
+}
+*/
+
+.navbar-right {float: right !important;}
+
+
+/* http://stackoverflow.com/questions/18610249/twitter-bootstrap-3-navbar-navbar-right-outside-navbar-collapse */
+@media(max-width:767px){
+    .navbar-right {margin-right:20px;}
+    .navbar-header:after {clear: none;}
+    .navbar-nav.navbar-right > li { float: left; }
+
+    .navbar-collapse:before {clear:both;}
+
+    .navbar-collapse {overflow-y: hidden;}
+    .navbar-collapse.in {overflow-y: visible;}
+}
+
+.navbar-header{
+    padding-left: 10px;
+}
+.navbar-brand{
+    position: relative;
+    left: 20px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+/* sign in dropdown */
+#signin{
+    min-width: 225px;
+    max-width: 500px;
+    padding: 10px;
+}
+
 /* any heading */
 .heading{
 	/*   font-size: 20px; */
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     color: lightskyblue;
+
 }
 
 /* youtube videos list */
@@ -33,28 +82,41 @@
     padding: 0;
 }
 
-.ui-li-thumb{
+.yt-image{
     width: 80px;
     height: 80px;
     margin-left: 1px;
 }
 
-/* panel / list font */
+/* side panel / list font */
 li a{
     font-family: 'Lato', sans-serif;
     font-weight: 500;
+    font-size: large;
 }
 
-.icon-white{
-    margin-right: 10px;
+li .glyphicon{
+    margin-left: 10px;
+    margin-right: 20px;
 }
+.nav-pills > li > a { /* nav pill size */
+    height: 45px;
+    line-height: 25px;
+}
+
 
 /* flexslider */
 #slider{
     margin: auto;
     max-height: 700px;
-    max-width: 700px;
+    max-width: 720px;
 
+}
+.flexslider{
+    background:none;
+    border:none;
+    box-shadow:none;
+    margin:0px;
 }
 
 .slides li img{
@@ -66,8 +128,8 @@ li a{
     .slides li img {height:200px;}
 }
 @media only screen and (min-width: 480px) and (max-width: 700px) {
-    .slides li img {height:220px;}
-    #slider {width:420px;}
+    .slides li img {height:270px;}
+    #slider {max-width:600px;}
 }
 
 .flex-caption{
@@ -108,13 +170,40 @@ li a{
 
 #img-more{
     margin-bottom: 5px;
+    max-width: 100%;
 }
 
-/*
-#panel-left{
-    background: rgba(0,0,0,0.5);
+/* panel */
+#panel-title{
+    margin: 13px;
+    color: yellow;
 }
+
+.snap-drawers{
+    background: url('panelback2.png');
+}
+#panel-left a{
+    color: white;
+}
+#panel-left .nav-pills > li > a:hover {
+      background-color: #ff0000;
+}
+/*
 */
+
+/* bootstrap panel */
+.panel-title{
+    color: white;
+}
+.panel-primary {
+  border-color: deepskyblue;
+}
+
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: deepskyblue;
+  border-color: deepskyblue;
+}
 
 /* news post */
 .post{

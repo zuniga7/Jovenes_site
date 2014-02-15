@@ -1,45 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title>Grupo de Jovenes</title>
-   
-  <meta name="author" content="Haziel Zuniga">
-  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye">
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <meta charset="UTF-8"> 
+  <title>Grupo de Jovenes</title>
   
+  <meta name="author" content="Haziel Zuniga">
+  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye, nogales, iglesia, church, youth group">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"> 
+
     <!-- styles -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/flexslider.css" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">    
+    <link href="styles/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/snap.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
 </head>
 
 <body>
-<div data-role='page'>
 
-  <div data-role='content'>
+  <div id="content" class="snap-content">
 
     <!-- navbar -->
-    <div class='navbar navbar-static-top' role="navigation">
-      <div class="navbar-inner">
-        <div class='container-fluid'>
-           <a href='#panel-left' class="btn pull-left" data-toggle="collapse" data-target="nav-collapse"><i class="icon-align-justify"></i></a>
-            
-            <span class="brand">Grupo de Jovenes</span>
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
 
-            <a href='#panel-right' class="btn pull-right" data-toggle="collapse" data-target="nav-collapse"><i class="icon-edit"></i></a>
-        </div> 
-      </div>
-    </div>
+      <div class="container">
 
-    <div class='afterNavBar'>
+        <a id="open-left" href="#panel-left" class="btn pull-left btn-default navbar-btn" data-toggle="collapse" data-target="nav-collapse"><span class="navbar-link glyphicon glyphicon glyphicon-th-list"></span></a>
+          
+        <div class="navbar-header">
+          <span class="navbar-brand">Grupo de Jovenes</span>
+        </div>            
+         
+        <div class="pull-right">
+            <div class="dropdown">
+              <button class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="navbar-link glyphicon glyphicon-user"></span></button>
+              <ul class="dropdown-menu pull-right">
+              <!-- menu -->
+                <li>
+                  <div id="signin" class="container">
+                    <form class="form-signin" id="form" action="javascript:processLogin();">
+                      <div id="form-alert" class="alerts"></div>
+                      <div class="form-group">
+                        <div> 
+                          <input type="text" data-role="none" id="user" class="form-control" name="username" placeholder="Username" required>
+                        </div> 
+                      </div> 
+                      <div class="form-group">
+                        <div> 
+                          <input type="password" data-role="none" id="pass" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                      </div> 
+                      <input type="submit" class="btn btn-primary btn-block" value="Sign In">
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div> 
+    </nav>
+
+    <div class='afterNavBar news'>
 
       <!-- accordian for groups -->
-      <div class="accordion" id="accordion2">
-        
+      <div class="panel-group" id="accordion2">      
+      <!-- temporarily remove
         <div class="accordion-group">          
           <div class="accordion-heading">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
@@ -57,34 +83,38 @@
               <br><br>
               Dios los bendiga.
               <br>
-              -Brenda Ochoa
+              -
               
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> --> 
 
-        <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
                 Media and Arts Team
-              </a>
+                </a>
+              </h4>
             </div>
-            <div id="collapseTwo" class="accordion-body collapse">
-              <div class="accordion-inner">
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
                 What we do in media and arts is use the technology of today to appeal the younger generations that rely mostly on technology for communication. Anything that has to do with technology, we use it for our advantage. We help spread the gospel of Christ thought the media. We can also give biblical studies to instruct the youth to be superior both in their personal life and in school.<br>
                 -Alonzo Castro and Emmanuel Cota
               </div>
             </div>
         </div>
 
-        <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
                 NHS Campus Student Fellowship
-              </a>
+                </a>
+              </h4>
             </div>
-            <div id="collapseSeven" class="accordion-body collapse">
-              <div class="accordion-inner">
+            <div id="collapseSeven" class="panel-collapse collapse">
+              <div class="panel-body">
                 Meetings are held in J3 at 11:35am every Thursday at Nogales High School.
                 <br>
                 -Jason Ortiz
@@ -92,14 +122,16 @@
             </div>
         </div>
 
-        <div class="accordion-group">
-            <div class="accordion-heading">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
                 Outreach Team
               </a>
+            </h4>
             </div>
             <div id="collapseThree" class="accordion-body collapse">
-              <div class="accordion-inner">
+              <div class="panel-body">
                 Si tu deseo es servir a Dios y quieres participar y empezar a hacer lo, este es el grupo del cual perteneces tu!! 
                 Outreach significa ALCANCE y eso es exactamente lo que hacemos nosotros. Tenemos diversas operaciones del cual estamos seguros que podr&aacute;s participar en alguno de ellos para la gloria a Dios.  AN&Iacute;MATE Y AP&Uacute;NTATE HOY!! Con Liz Covarrubias                
                 <br><br>
@@ -109,14 +141,16 @@
             </div>
         </div>
 
-        <div class="accordion-group">
-            <div class="accordion-heading">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
                 Prayer Group
               </a>
+            </h4>
             </div>
             <div id="collapseFour" class="accordion-body collapse">
-              <div class="accordion-inner">
+              <div class="panel-body">
                 Hola a todos! Me da mucho gusto presentarles a ustedes este medio donde estaremos orando por las necesidades de nuestra iglesia. A como va pasando el tiempo y el crecimiento espiritual empieza a manifestarse en madurez, los ataques se van haciendo mas reales y fuertes. Escrito esta, "12 Porque no tenemos lucha contra sangre y carne, sino contra principados, contra potestades, contra los gobernadores de las tinieblas de este siglo, contra huestes espirituales de maldad en las regiones celestes"(Efesios 6). 
                 <br><br>
                 Asi que hermanos, estar firmes y gozosos porque no estamos solos, "...sabiendo que los mismos padecimientos se van cumpliendo en vuestros hermanos en todo el mundo"(1 Pedro 5:9).                
@@ -130,29 +164,33 @@
             </div>
         </div>
 
-        <div class="accordion-group">
-            <div class="accordion-heading">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
                 Transportation Team
               </a>
+            </h4>
             </div>
             <div id="collapseFive" class="accordion-body collapse">
-              <div class="accordion-inner">
+              <div class="panel-body">
                 Luke 4:43 but Jesus said,"I must proclain the good news of the Kingdom of God to other towns also, because that is why I was sent." <br>
                 If you do not own a car or are in need of trasportation just call or text (520)223-6789. There, one of our trasportation experts will go directly to your house or a location near your home and will take you back after the event is over so you and your family will not need to worry. We are a Church that cares for your walk with Jesus and will do our best to make sure you don't miss a single service. We Love you in Christ my Brothers & Sisters.<br>
-                -Jason Ortiz and Charlie Rivera
+                -Jason Ortiz
               </div>
             </div>
         </div>
 
-        <div class="accordion-group">
-            <div class="accordion-heading">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
                 Worship Team
               </a>
+            </h4>
             </div>
             <div id="collapseSix" class="accordion-body collapse">
-              <div class="accordion-inner">
+              <div class="panel-body">
                 But the hour is coming, and is now here, when the true worshipers will worship the Father in spirit and truth, for the Father is seeking such people to worship him. God is spirit, and those who worship him must worship in spirit and truth. (John 4:23, 24 ESV) <br><br>
                 Everything we do, every song we play and sing is all to Praise the Lord in spirit and truth.
                 The members of the Worship team are 6 talented musicians who work hard and give their all to worship God. These members are: 
@@ -174,51 +212,27 @@
 
     </div> <!-- end of afterNavBar -->
   </div> <!-- end of content -->
-  
-  <!-- panel left -->
-  <div data-role="panel" data-theme='a' id="panel-left" data-display="reveal">
-    <!-- menu -->
-    <h3 class="heading text-center">IXOYE GDJ</h3>
-    <ul id='footer' data-role='listview' data-icon='false' data-theme='a' class="nav nav-stacked">
-      <li> <a href="home.html" rel="external"><i class="icon-home icon-white"></i> Home</a></li>
-      <li> <a href="gallery.html" rel="external"><i class="icon-picture icon-white"></i> Gallery</a></li>
-      <li> <a href="preachings.html" rel="external"><i class="icon-book icon-white"></i> Preachings</a></li>
-      <li> <a class='ui-btn-active' href="resources.html"><i class="icon-envelope icon-white"></i> Resources</a></li>
-      <li> <a href="about.html"><i class="icon-info-sign icon-white"></i> More</a></li>
-    </ul>
-  </div>
-
-  <!-- panel right -->
-  <div data-role="panel" id="panel-right" data-theme='a' data-display="reveal" data-position="right">
-    <!-- menu -->
-    <h3 class="heading text-center">Sign in!</h3>
-
-    <div class="container">
-      <form class="form-signin" id="form" action='javascript:processLogin();'>
-        <div id='form-alert' class="alerts"></div>
-        <div class="control-group">
-          <div> 
-            <input type="text" data-role='none' id="user" class="" name="username" placeholder="Username" required>
-          </div> 
-          <div> 
-            <input type="password" data-role='none' id="pass" class="" name="password" placeholder="Password" required>
-          </div>
-        </div>  
-        <input type="submit" class="btn btn-primary btn-large" value='Sign In'>
-      </form>
+      
+      <!-- panel left -->
+    <div class="snap-drawers">
+      <div class="snap-drawer snap-drawer-left" id="panel-left">
+        <!-- menu -->
+        <h3 id="panel-title" class="heading text-center">IXOYE GDJ</h3>
+        <ul id="footer" data-role="listview" class="nav nav-pills nav-stacked">
+          <li> <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li> <a href="gallery.html" rel="external"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+          <li> <a href="videos.html" rel="external"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></li>
+          <li class="active"> <a href="resources.html"><span class="glyphicon glyphicon-envelope"></span> Resources</a></li>
+          <li> <a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> More</a></li>
+        </ul>
+      </div>
     </div>
- 
-  </div>
-
-</div> <!-- end of page -->
-
       <!-- javascript
       ==================================================
       Placed at the end of the document so the pages load faster -->
       <script src="http://code.jquery.com/jquery.min.js"></script>
-      <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-      <script src="scripts/jquery.flexslider-min.js"></script>
+      <script src="bootstrap3/js/bootstrap.min.js"></script>
+      <script src="scripts/snap.min.js"></script>
       <script src="scripts/scripts.js"></script>
 </body>
 </html>

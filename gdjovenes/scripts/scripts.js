@@ -1,7 +1,42 @@
 // for reference... 
-/* 
+
 // when window loads
 $(window).load(function() {	
+	/* instantiate snapper object, and define pane to slide left or right */
+	var snapper = new Snap({
+	    element: document.getElementById('content'),
+	    disable: "right"
+	});
+
+  	/* Get reference to toggle button, the html element with ID "open-left" */
+    var myToggleButton = document.getElementById('open-left')
+
+    /* Add event listener to our toggle button */
+    myToggleButton.addEventListener('click', function() {
+
+	    if (snapper.state().state == "left") {
+	            snapper.close();
+	    } else {
+	            snapper.open('left');
+	    }
+    });
+
+  	/* Prevent Safari opening links when viewing as a Mobile App */
+    (function(a, b, c) {
+        if (c in b && b[c]) {
+            var d, e = a.location,
+                    f = /^(a|html)$/i;
+            a.addEventListener("click", function(a) {
+                d = a.target;
+                while (!f.test(d.nodeName))
+                    d = d.parentNode;
+                "href" in d && (d.href.indexOf("http") || ~d.href.indexOf(e.host)) && (a.preventDefault(), e.href = d.href)
+            }, !1)
+        }
+    })(document, window.navigator, "standalone");
+
+
+/*  
     // start carousal
     startCarousal();
 
@@ -13,8 +48,9 @@ $(window).load(function() {
 
     // get gallery feed
     getGalleryFeed();
+    */
 });
-*/
+
 
 function startCarousal () {
     $('.flexslider').flexslider({
@@ -89,7 +125,7 @@ function getYoutubeVideos () {
 
 	        "<li>"+
 		        "<a href=" +url+ " title=" +feedTitle+ ">"+
-		        	"<img class='ui-li-has-thumb ui-shadow' alt=" +feedTitle+ " src="+ thumb +">"+
+		        	"<img class='yt-image' alt=" +feedTitle+ " src="+ thumb +">"+
 		        	"<h3>"+feedTitle+"</h3>"+
 		        	"<p>"+feedDesc+"</p>"+
 		        "</a>"+
@@ -147,20 +183,33 @@ function processLogin () {
 
 				// close panel & empty page content
 				$(".afterNavBar").empty();
-				$("#panel-right").panel("close");				
+				$("body").trigger("click"); //close dropdown			
 
 				// show form
-				var form = "<div class='container'>"+
-			    "  <form class='form-signin' id='newsform' action='javascript:addNews();'>"+
-			    "    <h2 class='heading'>New Message!</h2>"+
-			    "    <div class='alerts'></div>"+
-			    "     <div class='control-group'>"+
-			    "        <input type='text' id='newsTitle' class='input-block-level' name='newsTitle' placeholder='Title' required>"+
-			    "        <textarea class='input-block-level' id='newsMessage' placeholder='Message' required></textarea>"+
-			    "    </div>"+
-			    "    <input type='submit' id='submitButton' class='btn btn-primary btn-large' value='Submit!'>"+
-			    "  </form>"+
-			    "</div>";				
+				var form = "<!-- Nav tabs -->"+
+	    		"<ul class='nav nav-tabs'>"+
+	    		  "<li class='active'><a href='#messages-form' data-toggle='tab'>New Message</a></li>"+
+	    		  "<li><a href='#resources-form' data-toggle='tab'>Edit Resources</a></li>"+
+	    		"</ul>"+
+	    		"<!-- Tab panes -->"+
+	    		"<div class='tab-content'>"+
+				  "<div class='tab-pane fade in active' id='messages-form'>"+
+	    			 "<div class='container'>"+
+			    	   "<form class='form-signin' id='newsform' action='javascript:addNews();'>"+
+			    	     "<h2 class='heading'>New Message!</h2>"+
+			    	     "<div class='alerts'></div>"+
+			    	      	"<div class='control-group'>"+
+			    	         	"<input type='text' data-role='none' id='newsTitle' class='form-control' name='newsTitle' placeholder='Title' required>"+
+			    	        	"<textarea  data-role='none' class='form-control' id='newsMessage' placeholder='Message' required></textarea>"+
+			    	     	"</div>"+
+			    	     	"<input type='submit' id='submitButton' class='btn btn-primary btn-large' value='Submit!'>"+
+			    	   	"</form>"+
+			    	 "</div>"+
+	    		  "</div>"+
+	    		  "<div class='tab-pane fade' id='resources-form'>"+
+			    	     "<h2 class='heading'>Coming Soon!</h2>"+
+	    		  "</div>"+
+	    		"</div>";				
 
 		    	$(".afterNavBar").append(form);
 			} 
@@ -199,7 +248,7 @@ function badPass () {
 	$(".control-group").attr("class", "control-group error");
 	var alert = $("#form-alert");
 	alert.empty();
-	alert.attr("class", "alert alert-block alert-error fade in");
+	alert.attr("class", "alert alert-block alert-danger fade in");
 	alert.append('<h4 class="alert-heading">Invalid Login!</h4>Bad username and password combination!');
 }
 

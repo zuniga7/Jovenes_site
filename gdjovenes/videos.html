@@ -4,14 +4,14 @@
   <title>Grupo de Jovenes</title>
   
   <meta name="author" content="Haziel Zuniga">
-  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye">
+  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye, nogales, iglesia, church, youth group">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8"> 
 
     <!-- styles -->
     <link href="styles/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/animate-custom.css" type="text/css">
+    <link href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/snap.css"/>
     <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -35,7 +35,7 @@
          
         <div class="pull-right">
             <div class="dropdown">
-              <button class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="navbar-link glyphicon glyphicon-user"></span></button>
+              <button data-role="none" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="navbar-link glyphicon glyphicon-user"></span></button>
               <ul class="dropdown-menu pull-right">
               <!-- menu -->
                 <li>
@@ -62,26 +62,26 @@
       </div> 
     </nav>
 
-    <div class='afterNavBar'>
+    <div class='afterNavBar'> 
 
       <!-- news / post -->
       <div class='news'>
-        <h2 class='page-header' id='gal-title'>Gallery</h2>
-        <div id="instafeed"></div>
+        <h2 class='page-header'>Videos</h2>
       </div>
-
+      <ul id='yt-list' class='' data-role='listview' data-inset="true"></ul>
+    
     </div>
-
-</div>
+  </div>
+  
       <!-- panel left -->
     <div class="snap-drawers">
       <div class="snap-drawer snap-drawer-left" id="panel-left">
         <!-- menu -->
         <h3 id="panel-title" class="heading text-center">IXOYE GDJ</h3>
-        <ul id="footer" data-role="listview" class="nav nav-pills nav-stacked">
+        <ul id="footer" data-role="none" class="nav nav-pills nav-stacked">
           <li> <a href="index.html" rel="external"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-          <li class="active"> <a href="gallery.html" rel="external"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
-          <li> <a href="videos.html" rel="external"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></li>
+          <li> <a href="gallery.html" rel="external"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+          <li class="active"> <a href="videos.html" rel="external"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></li>
           <li> <a href="resources.html" rel="external"><span class="glyphicon glyphicon-envelope"></span> Resources</a></li>
           <li> <a href="about.html" rel="external"><span class="glyphicon glyphicon-info-sign"></span> More</a></li>
         </ul>
@@ -91,15 +91,15 @@
       ==================================================
       Placed at the end of the document so the pages load faster -->
       <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
       <script src="scripts/snap.min.js"></script>
-      <script src="bootstrap3/js/bootstrap.min.js"></script>
-      <script src="scripts/instafeed.min.js"></script>
       <script src="scripts/scripts.js"></script>
       <script type="text/javascript">
       // when window loads
       $(window).load(function() { 
-          getGalleryFeed();
+          getYoutubeVideos();
       });
-      </script>
+      </script> 
 </body>
 </html>
