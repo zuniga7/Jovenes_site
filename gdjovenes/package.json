@@ -1,0 +1,38 @@
+{
+  "name": "IXOYE-GDJ",
+  "version": "1.0.0",
+  "description": "Somos un ministerio con la visión de evangelisar, discipular, enviar y preparar a nuestros jóvenes a no solo tener una vida, sino a tener un legado en el nombre de Cristo Jesus!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zuniga7/Jovenes_site.git"
+  },
+  "keywords": [
+    "Nuevo",
+    "Amanecer",
+    "grupo",
+    "jovenes",
+    "ixoye",
+    "nogales",
+    "iglesia",
+    "church",
+    "youth",
+    "group"
+  ],
+  "author": "Nuevo Amanecer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuniga7/Jovenes_site/issues"
+  },
+  "homepage": "https://github.com/zuniga7/Jovenes_site",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-autoprefixer": "~0.8.2"
+  }
+}

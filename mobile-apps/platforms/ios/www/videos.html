@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <title>Videos</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nuevo Amanecer">
+  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye, nogales, iglesia, church, youth group">
+  <meta name="description" content="Tremendas predicaciones y videos">
+
+    <!-- styles -->
+    <link href="css/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/snap.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body>
+
+  <div id="content" class="snap-content">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+
+      <div class="container">
+
+        <a id="open-left" href="#panel-left" class="btn pull-left btn-default navbar-btn" data-toggle="collapse" data-target="nav-collapse"><span class="navbar-link glyphicon glyphicon glyphicon-th-list"></span></a>
+          
+        <div class="navbar-header">
+          <span class="navbar-brand">Grupo de Jovenes</span>
+        </div>            
+         
+        <div class="pull-right">
+            <div class="dropdown">
+              <button data-role="none" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="navbar-link glyphicon glyphicon-user"></span></button>
+              <ul class="dropdown-menu pull-right">
+              <!-- menu -->
+                <li>
+                  <div id="signin" class="container">
+                    <form class="form-signin" id="form" action="javascript:processLogin();">
+                      <div id="form-alert" class="alerts"></div>
+                      <div class="form-group">
+                        <div> 
+                          <input type="text" data-role="none" id="user" class="form-control" name="username" placeholder="Username" required>
+                        </div> 
+                      </div> 
+                      <div class="form-group">
+                        <div> 
+                          <input type="password" data-role="none" id="pass" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                      </div> 
+                      <input type="submit" class="btn btn-primary btn-block" value="Sign In">
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div> 
+    </nav>
+
+    <div class='afterNavBar'> 
+
+      <!-- news / post -->
+      <div class='news'>
+        <h2 class='page-header'>Videos</h2>
+      </div>
+      <ul id='yt-list' class='' data-role='listview' data-inset="true"></ul>
+    
+    </div>
+  </div>
+  
+      <!-- panel left -->
+    <div class="snap-drawers">
+      <div class="snap-drawer snap-drawer-left" id="panel-left">
+        <!-- menu -->
+        <h3 id="panel-title" class="heading text-center">IXOYE GDJ</h3>
+        <ul id="footer" data-role="none" class="nav nav-pills nav-stacked">
+          <li> <a href="index.html" rel="external"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li> <a href="gallery.html" rel="external"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+          <li class="active"> <a href="videos.html" rel="external"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></li>
+          <li> <a href="resources.html" rel="external"><span class="glyphicon glyphicon-envelope"></span> Resources</a></li>
+          <li> <a href="about.html" rel="external"><span class="glyphicon glyphicon-info-sign"></span> More</a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- javascript
+      ==================================================
+      Placed at the end of the document so the pages load faster -->
+      <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="js/snap.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script type="text/javascript">
+      // when window loads
+      $(window).load(function() { 
+          getYoutubeVideos();
+      });
+      </script> 
+</body>
+</html>

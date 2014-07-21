@@ -1,0 +1,173 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <title>IXOYE Grupo de Jovenes | Nuevo Amanecer</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nuevo Amanecer">
+  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye, nogales, iglesia, church, youth group">
+  <meta name="description" content="Somos un ministerio con la visión de evangelisar, discipular, enviar y preparar a nuestros jóvenes a no solo tener una vida, sino a tener un legado en el nombre de Cristo Jesus!">
+  <meta itemprop="image" content="styles/ixoyelogo.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IXOYE Grupo de Jovenes | Nuevo Amanecer">
+  <meta property="og:description" content="Somos un ministerio con la visión de evangelisar, discipular, enviar y preparar a nuestros jóvenes a no solo tener una vida, sino a tener un legado en el nombre de Cristo Jesus!">
+  <meta property="og:url" content="http://ixoyenogales.org/">
+  <meta property="og:image" content="styles/ixoyelogo.jpg">
+  
+
+  <!-- styles -->
+  <link href="css/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="css/snap.css"/>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+
+<body>
+
+  <div id="content" class="snap-content">
+
+	<!-- navbar -->
+	<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+
+	  <div class="container">
+
+		<a id="open-left" href="#panel-left" class="btn pull-left btn-default navbar-btn" data-toggle="collapse" data-target="nav-collapse"><span class="navbar-link glyphicon glyphicon glyphicon-th-list"></span></a>
+		  
+		<div class="navbar-header">
+		  <span class="navbar-brand">Grupo de Jovenes</span>
+		</div>            
+		 
+		<div class="pull-right">
+			<div class="dropdown">
+			  <button class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="navbar-link glyphicon glyphicon-user"></span></button>
+			  <ul class="dropdown-menu pull-right">
+			  <!-- menu -->
+				<li>
+				  <div id="signin" class="container">
+					<form class="form-signin" id="form" action="javascript:processLogin();">
+					  <div id="form-alert" class="alerts"></div>
+					  <div class="form-group">
+						<div> 
+						  <input type="text" data-role="none" id="user" class="form-control" name="username" placeholder="Username" required>
+						</div> 
+					  </div> 
+					  <div class="form-group">
+						<div> 
+						  <input type="password" data-role="none" id="pass" class="form-control" name="password" placeholder="Password" required>
+						</div>
+					  </div> 
+					  <input type="submit" class="btn btn-primary btn-block" value="Sign In">
+					</form>
+				  </div>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+	  </div> 
+	</nav>
+
+	<div class="afterNavBar">
+
+	  <!-- slider / carousel -->
+	  <div class="flex-container" id="slider">
+		<div class="flexslider">
+		  <ul class="slides" data-snap-ignore="true">
+			<li>
+			  <a href="https://www.facebook.com/nuevoamanecer.grupodejovenes">
+				<img src="styles/ixoyecover.jpg" alt="ixoye grupo de jovenes">
+				<p class="flex-caption">Los Jovenes de Nuevo Amanecer!</p>
+			  </a>
+			</li>
+			<li id="yt">
+			</li>
+			<li>
+			  <a href="https://www.facebook.com/groups/306755496137707?ref=bookmark">
+				<img src="pictures/oracion.jpg" alt="grupo de oracion">
+				<p class="flex-caption">Grupo de Oracion</p>
+			  </a>
+			</li>
+			<!-- temporarily remove
+			<li>
+			  <a href="https://www.facebook.com/groups/226132897540016/">
+				<img src="pictures/john832.jpg" alt='image'/>
+				<p class="flex-caption">Grupo Devocional</p>
+			  </a>
+			</li>
+			 -->
+		  </ul>
+		</div>  
+	  </div>
+
+
+	  <!-- news / post -->
+	  <div class="news">
+		<h2 class="page-header">News</h2>
+	  </div>
+
+	  <!-- footer -->
+	
+	  <!-- social links 
+	  <a href="http://ixoyenogales.org"><img id="logoshare" src="styles/ixoyelogo.jpg"></a> -->
+      <div class="social-icons">
+        <a href="https://www.youtube.com/user/ixoyenog" class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://www.facebook.com/ixoyejovenes" class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://plus.google.com/101937088820811746596/about" class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://instagram.com/ixoyegdj" class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://twitter.com/IxoyeGDJ" class="fa-stack fa-2x">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </a>
+	  </div>
+
+	</div> <!-- after navbar -->
+  </div> <!-- snap content -->
+
+	  <!-- panel left -->
+	<div class="snap-drawers">
+	  <div class="snap-drawer snap-drawer-left" id="panel-left">
+		<!-- menu -->
+		<h3 id="panel-title" class="heading text-center">IXOYE GDJ</h3>
+		<ul id="footer" data-role="listview" class="nav nav-pills nav-stacked">
+		  <li class="active"> <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+		  <li> <a href="gallery.html" rel="external"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+		  <li> <a href="videos.html" rel="external"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></li>
+		  <li> <a href="resources.html"><span class="glyphicon glyphicon-envelope"></span> Resources</a></li>
+		  <li> <a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> More</a></li>
+		</ul>
+	  </div>
+	</div>
+	  <!-- javascript
+	  ==================================================
+	  Placed at the end of the document so the pages load faster -->
+	  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	  <script type="text/javascript" src="js/snap.min.js"></script>
+	  <script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	  <script type="text/javascript" src="js/scripts.js"></script>
+	  <script type="text/javascript">
+	  // when window loads
+	  $(window).load(function() { 
+		  startCarousal();
+		  getNews();
+		  homePageFirstYoutubeVid();
+		});
+	  </script>
+</body>
+</html>

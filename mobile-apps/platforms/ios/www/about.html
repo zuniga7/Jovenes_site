@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <title>About</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Nuevo Amanecer">
+  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye, nogales, iglesia, church, youth group">
+  <meta name="description" content="Quienes Somos">
+
+    <!-- css -->
+    <link href="css/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/snap.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body>
+
+  <div id="content" class="snap-content">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+
+      <div class="container">
+
+        <a id="open-left" href="#panel-left" class="btn pull-left btn-default navbar-btn" data-toggle="collapse" data-target="nav-collapse"><span class="navbar-link glyphicon glyphicon glyphicon-th-list"></span></a>
+          
+        <div class="navbar-header">
+          <span class="navbar-brand">Grupo de Jovenes</span>
+        </div>            
+         
+        <div class="pull-right">
+            <div class="dropdown">
+              <button class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="navbar-link glyphicon glyphicon-user"></span></button>
+              <ul class="dropdown-menu pull-right">
+              <!-- menu -->
+                <li>
+                  <div id="signin" class="container">
+                    <form class="form-signin" id="form" action="javascript:processLogin();">
+                      <div id="form-alert" class="alerts"></div>
+                      <div class="form-group">
+                        <div> 
+                          <input type="text" data-role="none" id="user" class="form-control" name="username" placeholder="Username" required>
+                        </div> 
+                      </div> 
+                      <div class="form-group">
+                        <div> 
+                          <input type="password" data-role="none" id="pass" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                      </div> 
+                      <input type="submit" class="btn btn-primary btn-block" value="Sign In">
+                    </form>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div> 
+    </nav>
+
+    <div class='afterNavBar'>
+      
+        <div>
+          <img id='img-more' src="pictures/Grupo-Shirt2A.jpg" alt='Grupo de Jovenes Nuevo Amenecer'/>
+        </div>
+
+
+      <!-- news / post -->      
+      <div class='news'>  
+        <div id='btn-features'>
+          <button class='btn btn-large btn-block btn-primary' onclick="location.href='https://www.google.com/maps?t=h&amp;ll=31.3595485,-110.9502068&amp;spn=0.0032196,0.0050271&amp;q=Ixoyenogales.org+Grupo+de+Jovenes+para+Cristo+-+Nuevo+Amanecer&amp;cid=0x7e274ce715900152&amp;output=classic&amp;dg=ntvo'">Map</button>
+          <button class='btn btn-large btn-block btn-primary' onclick="location.href='https://www.facebook.com/nuevoamanecer.grupodejovenes'">Facebook</button>
+          <button class='disabled btn btn-large btn-block btn-primary' onclick="location.href='#'">Give</button>
+        </div>
+        <div class='post'>
+          <h3 class='heading'>Quienes Somos</h3>
+          <p class='message'>
+            Grupo de Jovenes Nuevo Amanecer somos un ministerio con la visi&oacute;n de:</p>
+            <ul>
+              <li>Evangelisar</li>
+              <li>Discipular</li>
+              <li>Enviar</li>
+            </ul><p>  
+En este ministerio tenemos el grupo de alabanza donde los mismos j&oacute;venes participan en exaltar el nombre de Jesucristo por medio de m&uacute;sica contempor&aacute;nea. 
+Tambien tenemos el grupo de liderazgo donde preparamos a los j&oacute;venes para predicar, preparar eventos, y cumplir con proyectos mediante principios y caracter&iacute;sticas Cristo-centricas. Estamos preparando a nuestros j&oacute;venes a no solo tener una vida, sino a tener un legado en el nombre de Cristo Jesus!
+          </p>
+          <div class='timestamp'></div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+      <!-- panel left -->
+    <div class="snap-drawers">
+      <div class="snap-drawer snap-drawer-left" id="panel-left">
+        <!-- menu -->
+        <h3 id="panel-title" class="heading text-center">IXOYE GDJ</h3>
+        <ul id="footer" data-role="listview" class="nav nav-pills nav-stacked">
+          <li> <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li> <a href="gallery.html" rel="external"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+          <li> <a href="videos.html" rel="external"><span class="glyphicon glyphicon-facetime-video"></span> Videos</a></li>
+          <li> <a href="resources.html"><span class="glyphicon glyphicon-envelope"></span> Resources</a></li>
+          <li class="active"> <a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> More</a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- javascript
+      ==================================================
+      Placed at the end of the document so the pages load faster -->
+      <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script src="bootstrap3/js/bootstrap.min.js"></script>
+      <script src="js/snap.min.js"></script>
+      <script src="js/scripts.js"></script>
+</body>
+</html>

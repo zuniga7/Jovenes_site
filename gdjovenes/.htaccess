@@ -1,0 +1,31 @@
+## 404 ##
+ErrorDocument 404 /404.html
+
+## GZIP ##
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/x-js text/js 
+</IfModule>
+
+## Specify a Vary: Accept-Encoding header ##
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz|woff)$”>
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 7 days"
+</IfModule>
+## EXPIRES CACHING ##

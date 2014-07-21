@@ -1,0 +1,186 @@
+[19-Feb-2014 09:57:47] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[20-Feb-2014 07:46:12] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[20-Feb-2014 07:47:34] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[20-Feb-2014 09:43:04] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[22-Feb-2014 20:37:05] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[26-Feb-2014 17:37:32] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[27-Feb-2014 09:27:22] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[27-Feb-2014 17:45:40] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[15-Mar-2014 14:07:55] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Mar-2014 10:28:05] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Mar-2014 10:28:30] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Mar-2014 10:29:02] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[23-Mar-2014 15:52:42] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[23-Mar-2014 15:53:24] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[30-Mar-2014 07:13:26] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[01-May-2014 13:02:21] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[05-Jul-2014 20:34:14] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[07-Jul-2014 20:46:17] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[11-Jul-2014 21:43:32] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1040] Too many connections' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[11-Jul-2014 22:11:22] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1040] Too many connections' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[13-Jul-2014 20:19:41] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[18-Jul-2014 19:27:05] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:09:23] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:10:28] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:11:10] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:11:15] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:11:21] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:11:24] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:11:25] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:11:40] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29
+[19-Jul-2014 16:15:39] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php:29
+Stack trace:
+#0 /home1/hzuniga/public_html/ixoyenogales.org/db_global.php(29): PDO->__construct('mysql:host=loca...', 'hzuniga', 'nogales7')
+#1 /home1/hzuniga/public_html/ixoyenogales.org/get_news.php(3): include('/home1/hzuniga/...')
+#2 {main}
+  thrown in /home1/hzuniga/public_html/ixoyenogales.org/db_global.php on line 29

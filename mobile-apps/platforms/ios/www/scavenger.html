@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Scavenger!</title>
+
+	<link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate-custom.css" type="text/css">
+    <style type="text/css">
+		.jumbotron{
+			text-align: center; 
+		}
+		#left{
+			float: left;
+			width: 50%;
+			padding-left: 3px;
+			padding-right: 3px;
+			padding-bottom: 5px;
+		}
+		#right{
+			float: right;
+			width: 50%;
+			padding-left: 3px;
+			padding-right: 3px;
+		}
+		.btn-block{
+			margin: auto;
+			max-width: 400px;
+		}
+		.feed a {
+		  margin:5px;
+		  display:inline-block;
+		  position:relative;
+		}
+
+		.feed .info {
+		  background:rgba(0,0,205,0.8);
+		  font-family:sans-serif;
+		  font-size:1em;
+		  position:absolute;
+		  color:#ffffff;
+		  right:5px;
+		  top:5px;
+		  left:5px;
+		  opacity:0;
+		  text-align:center;
+		  text-shadow:0 1px rgba(0,0,0,0.5);
+		  -webkit-font-smoothing:antialiased;
+		  -webkit-transition: opacity 100ms ease;
+			-moz-transition: opacity 100ms ease;
+			-o-transition: opacity 100ms ease;
+			-ms-transition: opacity 100ms ease;
+			transition: opacity 100ms ease;
+		}
+
+		.feed a:hover .info {
+		  opacity:1;
+		}
+    </style>
+</head>
+<body>
+	<div class="jumbotron">
+		<h1 id='error'>Scavenger Hunt!</h1>
+		
+		<p>You have two challenges with this Bible scavenger hunt. First, answer all of the clues. Once you have answers for all of them, you need to go and find each of the items and upload a picture to the correspondent hash tag team.</p>
+
+		<p>Click or hover for image information</p>
+		<p><b>GUYS:</b> #dude4jesus <b>GIRLS:</b> #dudettes4jesus</p>
+		
+
+		<a href="http://ixoyenogales.org" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-home"></span> Take Me Home</a>
+	</div>
+
+
+	<div id="left">
+		<h1>GUYS:</h1>
+		<div id="boysInstafeed" class="feed"></div>
+		<button class="btn btn-primary btn-lg btn-block" onclick="getMore(this, '#boysInstafeed')">More</button>
+	</div>
+	
+	<div id="right">
+		<h1>GIRLS:</h1>
+		<div id="girlsInstafeed" class="feed"></div>
+		<button class="btn btn-primary btn-lg btn-block" onclick="getMore(this, '#girlsInstafeed')">More</button>
+	</div>
+
+
+	<!-- javascript
+    ==================================================
+    Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    // when window loads
+    $(window).load(function() { 
+        getGalleryFeed('dude4jesus', '#boysInstafeed', 60);
+        getGalleryFeed('dudettes4jesus', '#girlsInstafeed', 60);
+	
+    	$('.post').popover();
+	});
+
+    
+
+    function getGalleryFeed (hashtag, targetLocationID, numberOfPhotos) {
+
+		url = "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent?client_id=ef0bbd19aa4547dbaca0fa96ef0b30dd";
+
+		ajaxInstagramAPI(url, targetLocationID);
+	}
+
+
+	function ajaxInstagramAPI (url, targetLocationID) {
+		$.ajax({
+	        type: "GET",
+	        dataType: "jsonp",
+	        cache: false,
+	        url: url,
+	        success: function(data) {
+	            //OKAY, now lets get to the pretty stuff, INSTAGRAM PEEKTARS.
+	            console.log(data);
+	            displayFeed(data, targetLocationID);
+	            
+	            // Store next url
+	            var url = data.pagination.next_url; // for next time
+	            if (url)
+            		$(targetLocationID).data('next_url', url);
+            	else{
+            		$(targetLocationID).data('next_url', false);
+            		$(targetLocationID).next().addClass("hidden");
+            	}
+            	
+	        }
+	    });
+	}
+
+	function displayFeed (JSONData, targetLocationID) {
+        $.each(JSONData.data, function(i, imageObject) {
+
+            var date = new Date(parseInt(imageObject.created_time) * 1000);
+                $(targetLocationID).append("\
+                    <a id='"+imageObject.images.thumbnail.url+"' class='post'>\
+                        <img class='instagram-image' src='" + imageObject.images.thumbnail.url +"' />\
+                        <div class='info'>\
+                            By: "+imageObject.user.username+"<br/>"
+                           	+date.toLocaleString()+
+                        "</div />\
+                    </a>\
+                ");
+            date = null;
+        });
+    }
+
+    function getMore (button, targetLocationID) {
+	    url = $(targetLocationID).data('next_url');
+
+		if ( url ) {
+	        ajaxInstagramAPI(url, targetLocationID);
+	    }
+   	}
+
+    </script>
+
+</body>
+</html>

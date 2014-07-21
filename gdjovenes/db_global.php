@@ -25,8 +25,8 @@
 */	
 	$db = new PDO(
 		"mysql:host=localhost;
-		dbname=jovenes", 
-		"root", "");
+		dbname=hzuniga_gdj", 
+		"hzuniga", "nogales7");
 
 	$db -> exec("set names utf8");
 ?>

@@ -1,20 +1,21 @@
 <!doctype html>
 <html>
 <head>
-  <title>Grupo de Jovenes</title>
+  <title>Gallery</title>
   
-  <meta name="author" content="Haziel Zuniga">
-  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8"> 
+  <meta name="author" content="Nuevo Amanecer">
+  <meta name="keywords" content="Nuevo Amanecer, grupo jovenes, ixoye, nogales, iglesia, church, youth group">
+  <meta name="description" content="Fotos de nuestro hashtag en Instagram">
 
     <!-- styles -->
-    <link href="styles/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/animate-custom.css" type="text/css">
-    <link rel="stylesheet" href="styles/snap.css"/>
+    <link href="css/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/snap.css"/>
     <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     
 </head>
 
@@ -68,6 +69,7 @@
       <div class='news'>
         <h2 class='page-header' id='gal-title'>Gallery</h2>
         <div id="instafeed"></div>
+        <button class="btn btn-primary btn-lg btn-block" onclick="getMore('#instafeed')">More</button>
       </div>
 
     </div>
@@ -90,15 +92,14 @@
       <!-- javascript
       ==================================================
       Placed at the end of the document so the pages load faster -->
-      <script src="http://code.jquery.com/jquery.min.js"></script>
-      <script src="scripts/snap.min.js"></script>
-      <script src="bootstrap3/js/bootstrap.min.js"></script>
-      <script src="scripts/instafeed.min.js"></script>
-      <script src="scripts/scripts.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="js/snap.min.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="js/scripts.min.js"></script>
       <script type="text/javascript">
       // when window loads
       $(window).load(function() { 
-          getGalleryFeed();
+          getGalleryFeed('nog4jesus', '#instafeed', 30);
       });
       </script>
 </body>
